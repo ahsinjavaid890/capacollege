@@ -40,7 +40,7 @@
                 <a href="{{ url('student-certificates')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Certificates')}}</a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('student-ebooks')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
+                <a href="{{ url('student-ebooks')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Recipes')}}</a>
             </li>
 
 

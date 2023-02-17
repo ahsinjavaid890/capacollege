@@ -1,14 +1,14 @@
 @extends('layouts.student-portal')
-@section('title',__('eBooks'))
+@section('title',__('recipes'))
 @section('content')
     <div class=" row mb-2">
         <div class="col">
             <h5 class="  fw-bolder">
                 {{__('Shop')}} /<span class="text-secondary">
-                            {{__(' My e-Books')}}
+                            {{__(' My recipes')}}
                     </span>
             </h5>
-            <p class="text-muted">{{__('All of my books')}}</p>
+            <p class="text-muted">{{__('All of my recipes')}}</p>
 
         </div>
         <div class="col text-end">
@@ -39,7 +39,7 @@
                         <h5 class="card-title mb-0">
                             <a href="{{ url('student/view-ebook')}}?id={{$product->id}}" class="">{{$product->name}}</a>
                         </h5>
-                        {!! renderEbookRating($product->id) !!}
+                        {!! renderrecipesRating($product->id) !!}
                     </div>
 
 

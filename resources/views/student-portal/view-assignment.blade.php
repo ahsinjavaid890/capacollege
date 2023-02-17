@@ -7,7 +7,7 @@
 
         <div class="col-md-6">
             <div class="card shadow blur mb-4 ">
-                <div class="card-header border-bottom"">
+                <div class="card-header border-bottom">
                     <h5 class="card-title">{{__('Assignment Details')}}</h5>
                 </div>
                 <div class="card-body">

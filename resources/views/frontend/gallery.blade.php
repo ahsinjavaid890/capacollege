@@ -55,7 +55,7 @@
             padding-left: 0;
             margin-bottom: 0;
             list-style: none;
-            width: 50%;
+            width: 35%;
             margin: auto;
         }
     .gallery_section ul.tabs li{
@@ -67,7 +67,7 @@
             color: #fff;
             border-radius: 30px;
             height: 61px;
-            width: 33%;
+            width: 50%;
         }
 
     .gallery_section ul.tabs li.current{

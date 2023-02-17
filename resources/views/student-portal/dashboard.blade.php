@@ -102,7 +102,7 @@
 
                 <div class="card mb-4">
                     <div class="card-header pb-0 p-2">
-                        <h6 class="mb-1">{{__('My Recent eBooks')}}</h6>
+                        <h6 class="mb-1">{{__('My Recent recipes')}}</h6>
 
                     </div>
 
@@ -151,7 +151,7 @@
                         @endforeach
                         @else
                         <div class="jumbotron text-center">
-                          <h3>You are not enrolled in any Ebooks.</h3>
+                          <h3>You are not enrolled in any recipes.</h3>
                         </div>
                         @endif
                         <!-- Card item END -->

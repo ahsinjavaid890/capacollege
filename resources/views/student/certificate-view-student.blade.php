@@ -42,7 +42,7 @@
                 <a href="" class="nav-link @if(($selected_nav ?? '') === 'student-certificate') active @endif fw-bolder">{{__('Certificates')}}</a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('student-ebooks')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
+                <a href="{{ url('student-ebooks')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Recipes')}}</a>
             </li>
         </ul>
         <hr>

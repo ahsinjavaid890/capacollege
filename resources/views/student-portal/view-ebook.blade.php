@@ -78,9 +78,9 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="d-flex align-items-center mb-4">
-                        <h3 class="me-3 mb-0">{!! getEbookRating($product->id) !!}/5</h3>
+                        <h3 class="me-3 mb-0">{!! getRecipesRating($product->id) !!}/5</h3>
                         <div>
-                            {!! renderEbookRating($product->id) !!}
+                            {!! renderRecipesRating($product->id) !!}
                             <p class="mb-0 small mt-n1">{{__('Reviews from our buyers')}}</p>
                         </div>
 
