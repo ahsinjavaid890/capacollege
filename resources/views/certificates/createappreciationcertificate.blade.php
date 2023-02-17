@@ -24,12 +24,7 @@
                     <div class="row ">
                         <div class="col-md-12">
                             <div class="logo_text d-flex certificate">
-                                 @if(!empty( $certificate->logo))
-                                    <img src="{{ url('public') }}/uploads/{{ $certificate->logo}}"
-                                         width="100px">
-                                @else
-                                    {{__(' Company logo')}}
-                                @endif
+                                <img src="{{ url('public') }}/uploads/{{$super_settings['favicon']}}" width="100px">
                                 <h2>Cake Uncle Academy of Pastry Arts</h2>
                             </div>
                             <div class="curved_text text-center">
@@ -42,32 +37,16 @@
                             <div class="certificate-description text-center mt-4">
                                 <p>To Whom It May Concern <br> This is to certify that <br>Mr. Amandeep Singh <br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>
                                 <p class="employe_des">
-                                    <span>Full Name:</span> 
-                                     @if(!empty($certificate->course_id))
-                                        @if(!empty($courses[$certificate->course_id]))
-                                            @if(isset($courses[$certificate->course_id]))
-                                                {{$courses[$certificate->course_id]->name}}
-                                            @endif
-                                        @endif
-                                    @endif
-                                    <br>
+                                    <span>Full Name:</span> Amandeep Singh<br>
                                     <span>Designation:</span>Pastry Chef<br>
                                     <span>Salary:</span> 3,60,000/- Per Annum<br>
-                                    <span>Full Name:</span> 
-                                     @if(!empty($certificate->course_id))
-                                        @if(!empty($courses[$certificate->course_id]))
-                                            @if(isset($courses[$certificate->course_id]))
-                                                {{$courses[$certificate->course_id]->name}}
-                                            @endif
-                                        @endif
-                                    @endif
-                                    <br>
+                                    <span>Full Name:</span> Amandeep Singh<br>
                                 </p>
                             </div>
                             <div class="row text-center">
                                 <div class="col-md-4">
                                     <div class="certificate-date">
-                                        <p>Date: {{__('on february 23, 2022')}}</p>
+                                        <p>Date: 16/Dec/2022</p>
                                         <p>Place: Chandigarh</p>
                                     </div>
                                 </div>
