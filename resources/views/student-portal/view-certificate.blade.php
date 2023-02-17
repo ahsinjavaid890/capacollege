@@ -63,87 +63,75 @@
 
     </div>
 
-    <div class=" col-lg-8 col-12 mx-auto mt-5 me-auto ms-auto mb-5">
-        <div class="col-md-10">
-
-            <div class="card border-5 border-radius-sm" @if(!empty( $certificate->background_color))
-            style="background-color:
-            {{ $certificate->background_color}};border-color: {{ $certificate->border_color}}"
-
-                    @endif
-            >
-
+        <div class="col-md-12 mb-3">
+            <div class="card certificate-card">
                 <div class="card-body">
-
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h4 class=" mt-4">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <div class="logo_text d-flex certificate">
                                 @if(!empty( $certificate->logo))
                                     <img src="{{ url('public') }}/uploads/{{ $certificate->logo}}"
-                                         class="w-50">
+                                         width="100px">
+                                <h2>Cake Uncle Academy of Pastry Arts</h2>
                                 @else
                                     {{__(' Company logo')}}
                                 @endif
-                            </h4>
-                            <p class="mb-3">
-                                <small> {{__('Certificate of Completion')}}</small>
-                            </p>
+                            </div>
+                            <div class="curved_text text-center">
+                                <h3>CakeUncle ACADEMY OF Pastery ARTS</h3>
+                            </div>
+                            <div class="certificate-heading text-center">
+                                <h2>{{__('Certificate of Completion')}}</h2>
+                            </div>
+                            <div class="certificate-description text-center mt-4">
+                                <p>To Whom It May Concern <br> This is to certify that <br>Mr. Amandeep Singh <br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>
+                                <p class="employe_des">
+                                    <span>Full Name:</span> 
+                                     @if(!empty( $certificate_received->student_id))
+                                        @if(!empty($students[ $certificate_received->student_id]))
+                                            @if(isset($students[ $certificate_received->student_id]))
+                                                {{$students[ $certificate_received->student_id]->first_name}}  {{$students[ $certificate_received->student_id]->last_name}}
+                                            @endif
+                                        @endif
+                                    @endif
+                                    <br>
+                                    <span>Designation:</span>Pastry Chef<br>
+                                    <span>Salary:</span> 3,60,000/- Per Annum<br>
+                                    <span>Full Name:</span> 
+                                     @if(!empty($certificate->course_id))
+                                        @if(!empty($courses[$certificate->course_id]))
+                                            @if(isset($courses[$certificate->course_id]))
+                                                {{$courses[$certificate->course_id]->name}}
+                                            @endif
+                                        @endif
+                                    @endif
+                                    <br>
+                                </p>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="certificate-date">
+                                        <p>Date: {{__('on february 23, 2022')}}</p>
+                                        <p>Place: Chandigarh</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="certificate-manager">
+                                        <p><span>Jaspreet Kaur</span><br>Manager-HR</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="certificate-sign">
+                                        <p><br><span>Signature</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-
-                        </div>
-
-
                     </div>
-
-                    <h2>
-                        @if(!empty( $certificate_received->student_id))
-
-                            @if(!empty($students[ $certificate_received->student_id]))
-                                @if(isset($students[ $certificate_received->student_id]))
-                                    {{$students[ $certificate_received->student_id]->first_name}}  {{$students[ $certificate_received->student_id]->last_name}}
-                                @endif
-                            @endif
-
-
-                        @endif
-
-
-
-                    </h2>
-
-                    <p class="">
-                        <small>{{__('has successfully completed the course')}} </small>
-                    </p>
-                    <h5 class="h6 text-decoration-underline">
-                        @if(!empty( $certificate->course_id))
-
-                            @if(!empty($courses[ $certificate->course_id]))
-                                @if(isset($courses[ $certificate->course_id]))
-                                    {{$courses[ $certificate->course_id]->name}}
-                                @endif
-                            @endif
-
-                        @endif
-                    </h5>
-                    <p class="">
-                        <small> {{__('on february 23, 2022')}}</small>
-                    </p>
-
-                    <p class="reason mb-4">
-                        <br/>
-
-                    </p>
-
                 </div>
-
-
-
-
             </div>
-
         </div>
-    </div>
+
 
 
 @endsection

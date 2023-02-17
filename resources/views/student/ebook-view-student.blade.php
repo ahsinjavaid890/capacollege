@@ -47,7 +47,7 @@
                 <a href="{{ url('student-certificates')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Certificates')}}</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link @if(($selected_nav ?? '') === 'student-ebook') active @endif fw-bolder">{{__('eBooks')}}</a>
+                <a href="" class="nav-link @if(($selected_nav ?? '') === 'student-ebook') active @endif fw-bolder">{{__('Recipes')}}</a>
             </li>
 
         </ul>
@@ -71,7 +71,7 @@
 
                         <div class="form-group">
                             <label for="example-text-input" class="form-control-label">
-                                {{__('Choose an eBook')}}
+                                {{__('Choose an Recipes')}}
 
                             </label><span class="text-danger">*</span>
 
@@ -108,7 +108,7 @@
 
                 <div class="card-body table-responsive">
                     <h6 class="card-title mb-3 ">
-                        {{__('eBooks')}}
+                        {{__('Recipes')}}
                     </h6>
                     <table class="table  mb-0">
                         <thead class="bg-gray-100">
