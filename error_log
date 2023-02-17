@@ -1,0 +1,5 @@
+[13-Feb-2023 14:48:03 UTC] PHP Warning:  require_once(/home4/a1635ync/capacollege.in/public/index.php): Failed to open stream: No such file or directory in /home4/a1635ync/capacollege.in/index.php on line 21
+[13-Feb-2023 14:48:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home4/a1635ync/capacollege.in/public/index.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home4/a1635ync/capacollege.in/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home4/a1635ync/capacollege.in/index.php on line 21
