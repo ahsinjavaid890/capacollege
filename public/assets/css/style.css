@@ -10598,7 +10598,7 @@ only screen and (max-width: 767px) {
 
 .testimonial-two {
     height: 335px;
-    margin: 10px;
+/*    margin: 10px;*/
     padding: 30px 50px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     min-height: 100%;

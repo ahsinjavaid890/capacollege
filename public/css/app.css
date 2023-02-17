@@ -638,11 +638,164 @@ li:hover > .glowing-circle {
     display: block;
     position: absolute;
     left: -20px;
-    top: 10px;
+    top: 4px;
     width: 12px;
     height: 12px;
-    border: 1px solid #018df5;
-    background: #018df5;
+    border: 1px solid #64307a;
+    background: #64307a;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 3px #fff inset;
+}
+
+
+
+
+.testimonial-active-two .swiper-slide{
+    width: 32% !important;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+/*  height: 49svh;*/
+  min-height: 320px;
+  overflow: inherit;
+/*  background-color: #46677b;*/
+}
+.swiper-pagination {
+    display: none;
+}
+.swiper-slide {
+  font-size: 0px;
+  background: #fff;
+  display: flex;
+}
+  .swiper-slide::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 1px !important;
+    right: auto !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 26px !important;
+    color: #64317c;
+    font-weight: 900
+}
+/*
+  Title Text
+*/
+.title {
+    padding: 0 10vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+    color: #ffffff;
+}
+.title__text {
+    letter-spacing: -2px;
+    font-size: clamp(3rem, 0.3864rem + 13.0682vw, 8.75rem);
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+}
+.title__text::after {
+    position: absolute;
+    top: 100%;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 0.25em;
+    background-color: #ef233c;
+    }
+  
+/*
+  Style up the image behind each slide
+*/
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.background-image__image {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0.8;
+mix-blend-mode: luminosity;
+}
+.swiper-slide{
+    width: 24% !important;
+    margin-right: 20px !important;
+}
+.course-slider .swiper{
+/*    height: 58svh !important;*/
+}
+.course-slider h5{
+    font-size: 15px;
+}
+.course-slider .swiper-button-next, .course-slider .swiper-button-prev{
+    top: 38%;
+}
+.why_choose .card-header{
+    padding-bottom: 0;
+}
+.why_choose .row{
+    max-width: 90%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 17%;
+    float: left;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    margin-left: 54px;
+    margin-right: 35px;
+    margin-top: 15px;
+}
+.testimonial-item.equal-height.style-6 {
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 10px;
+}
+.cell-right {
+    text-align: center;
+    margin-right: 80px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+.testimonial-name {
+    font-weight: 600;
+}
+.testimonial-content.quote {
+    padding: 17px 55px;
+}
+.et_right_sidebar #main-content .container:before{
+    display: none;
+}
+
+i.fa.fa-quote-left {
+    padding: 0px 10px;
+    color: #999;
 }

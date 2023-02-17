@@ -53,16 +53,15 @@
 
 
 
-    <section class="py-6"style="background-color: white; ">
-        <div class="testimonial-active-two my-0 mx-auto" >
-            
+    <section style="background-color: white; ">
+        <div class="course-slider my-0 mx-auto" >
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-lg-12 text-center">
                         <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Check our new courses')}}</h1>
                     </div>
                 </div>
-                <div class="swiper pb-3">
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         @foreach($courses as $course)
                         @if($course->status !='Draft')
@@ -102,11 +101,14 @@
                         @endif
                         @endforeach
                     </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="mt-4 background-img" style=" background-image: url('{{ url('public/images/franchise.png')  }}');">
+    <section class="mt-4 background-img why_choose" style=" background-image: url('{{ url('public/images/franchise.png')  }}');">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -116,7 +118,7 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <ul class="custom-list">
                                       <li>Career Consultancy Free</li>
                                       <li>Business Guidance</li>
@@ -127,7 +129,7 @@
                                       <li>Emi options to all the students</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <ul class="custom-list">
                                       
                                       <li>Cakeuncle Franchise free to our student for first year to help getting business online</li>
@@ -148,7 +150,6 @@
     </section>
     <section class="py-6"style="background-color: #f3dfe8;">
         <div class="testimonial-active-two my-0 mx-auto" >
-            
             <div class="container">
                 <div class="viewall_btn text-end">
                     <a href="{{ url('testimonial') }}" class="btn btn-blue">View All</a>
@@ -158,71 +159,117 @@
                         <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
                     </div>
                 </div>
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        @foreach(DB::table('testimonials')->get() as $r)
-                        <div class="swiper-slide">
-                            <div class="testimonial-two text-center">
-                                <div class="testimonial-two_quote">
-                                    <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z" fill="currentColor" fill-rule="nonzero"></path>
-                                    </svg>
-                                </div>
-                                <p class="testimonial-two_text">
-                                    {{ Str::limit($r->testimonial , 250); }}
-                                </p>
-                                <div class="testimonial-two_image">
-                                    <img width="56" height="56" src="{{ url('public/images') }}/{{ $r->image }}" alt="Author">
-                                </div>
-                                <span class="testimonial-two_name">
-                                    {{ $r->name }}
-                                </span>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                @foreach(DB::table('testimonials')->get() as $r)
+                    <div class="swiper-slide">
+                        <div class="testimonial-two text-center">
+                            <div class="testimonial-two_quote">
+                                <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z" fill="currentColor" fill-rule="nonzero"></path>
+                                </svg>
                             </div>
+                            <p class="testimonial-two_text">
+                                {{ Str::limit($r->testimonial , 250); }}
+                            </p>
+                            <div class="testimonial-two_image">
+                                <img width="56" height="56" src="{{ url('public/images') }}/{{ $r->image }}" alt="Author">
+                            </div>
+                            <span class="testimonial-two_name">
+                                {{ $r->name }}
+                            </span>
                         </div>
-                        @endforeach
-                        <!-- Testimonial Item End -->
-                        <!-- swiper-slide end-->
-
                     </div>
+                @endforeach
                 </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
             </div>
         </div>
     </section>
-     <section class="py-6 bg-gray-100">
-        <div class="testimonial-active-two my-0 mx-auto" >
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-lg-12 text-center">
-                        <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Student Prenuer')}}</h1>
-                    </div>
+    <section class="py-6 bg-gray-100">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Student Prenuer')}}</h1>
                 </div>
-                <div class="swiper pb-3">
-                    <div class="swiper-wrapper">
-                @foreach($studentprenuer as $studentprenuers)
+            </div>
+            <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    @foreach($studentprenuer as $studentprenuers)
                         <div class="swiper-slide">
                             <div class="card blog-card">
-                            <div class="card-header p-0 position-relative z-index-1">
-                                
-
+                                <div class="card-header p-0 position-relative z-index-1">
                                     @if(empty($studentprenuers->image))
                                     <img src="{{ url('public') }}/img/placeholder.jpeg"
                                              class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                     @else
                                         <img src="{{ url('public/images') }}/{{ $studentprenuers->image }}" class="img-fluid border-radius-lg">
                                     @endif
-                            </div>
-                            <div class="card-body pt-3">
-                                <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">{{$studentprenuers->bakery_name}}</span>
-                                <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
-                                    {{$studentprenuers->name}}
-                                </p>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">{{$studentprenuers->bakery_name}}</span>
+                                    <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
+                                        {{$studentprenuers->name}}
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                    @endforeach
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+        </div>
+    </section>
+    <section class="py-6">
+        <div class="container">
+            <div class="row">
+        <div class="col-md-12">
+            <div id="testimonial-slider" class="owl-carousel">
+
+                    @foreach($studentprenuer as $studentprenuers)
+                <div class="testimonial-item equal-height style-6" style="height: 254px;">
+                    <div class="testimonial-image cell-left">
+                        @if(empty($studentprenuers->image))
+                            <img src="{{ url('public') }}/img/placeholder.jpeg"
+                                 class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                        @else
+                            <img src="{{ url('public/images') }}/{{ $studentprenuers->image }}" class="img-fluid border-radius-lg">
+                        @endif
+                    </div>
+                    <div class="cell-right">
+                        <div class="testimonial-name">{{$studentprenuers->name}}
                         </div>
-                        @endforeach
+                        <div class="testimonial-job">{{$studentprenuers->bakery_name}}</div>
+                    </div>
+                    <div class="testimonial-content quote"><i class="fa fa-quote-left">  
+                        </i>This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. 
+                    </div>
+                </div>
+                @endforeach
+                <div class="testimonial-item equal-height style-6" style="height: 254px;">
+                    <div class="testimonial-image cell-left">
+                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Rose">
+                    </div>
+                    <div class="cell-right">
+                        <div class="testimonial-name">Rose
+                        </div>
+                        <div class="testimonial-job">Gardener
+                        </div>
+                    </div>
+                    <div class="testimonial-content quote"><i class="fa fa-quote-left">  
+                        </i>This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. 
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
         </div>
     </section>
 @endsection
@@ -266,5 +313,38 @@
         });
 
     </script>
+    <script type="text/javascript">
+        const settings = {
+          loop: true,
 
+          speed: 700,
+
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets"
+          },
+
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          }
+        };
+
+        const swiper = new Swiper(".mySwiper", settings);
+
+    </script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:6,
+        itemsDesktop:[1000,6],
+        itemsDesktopSmall:[980,1],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:true,
+        navigationText:["<",">"],
+        autoPlay:true
+    });
+});
+    </script>
 @endsection

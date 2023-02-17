@@ -32,7 +32,7 @@
                             </div>
                             <div class="certificate-heading text-center">
                                 <h2>Certificate</h2>
-                                <p>Of appreciation</p>
+                                <p>Of </p>
                             </div>
                             <div class="certificate-description text-center mt-4">
                                 <p>To Whom It May Concern <br> This is to certify that <br>Mr. Amandeep Singh <br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>

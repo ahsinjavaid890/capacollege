@@ -13,7 +13,7 @@
 
         </div>
         <div class="col-md-6 text-end">
-            <a href="{{ url('createappreciationcertificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Create Certificate')}}</a>
+            <a href="{{ url('createappreciationcertificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Create  Appreciation Certificate')}}</a>
             <a href="{{ url('create-certificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Create Certificate')}}</a>
 
         </div>

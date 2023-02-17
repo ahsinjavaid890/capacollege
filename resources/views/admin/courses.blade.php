@@ -11,7 +11,7 @@
                       {{__('Course List')}}
                     </span>
                 </h5>
-                <p class="text-muted">{{__('Create, edit or delete the courses and add lessons.')}}</p>
+                <p class="text-muted">{{__('Create, edit or delete the courses and add sessions.')}}</p>
 
             </span>
 
@@ -113,7 +113,7 @@
                                     <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                         aria-labelledby="dropdownMarketingCard">
                                         <li><a class="dropdown-item border-radius-md fw-bold"
-                                               href="{{ url('create-lesson')}}?course_id={{$course->id}}">{{__('Add Lesson')}}</a>
+                                               href="{{ url('create-session')}}?course_id={{$course->id}}">{{__('Add session')}}</a>
                                         </li>
                                         <li><a class="dropdown-item border-radius-md fw-bold"
                                                href="{{ url('create-course')}}?id={{$course->id}}">{{__('Edit Course')}}</a>
@@ -124,7 +124,7 @@
                                                href="{{ url('view-course')}}?id={{$course->id}}">{{__('View Course')}}</a>
                                         </li>
                                         <li><a class="dropdown-item border-radius-md fw-bold"
-                                               href="{{ url('lessons')}}?id={{$course->id}}">{{__('Lessons')}}</a>
+                                               href="{{ url('sessions')}}?id={{$course->id}}">{{__('sessions')}}</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">
