@@ -3,13 +3,23 @@
 
 @section('content')
 
+
     <div class=" row mb-2 d-print-none">
         <div class="col">
-            <h5 class="  fw-bolder">
+            <div class="d-flex">
+                
+                <h5 class="  fw-bolder">
                 {{__('Certificates')}} /<span class="text-secondary">
                           {{__('My Certificate')}}
                     </span>
             </h5>
+                <a href="javascript:void(0)" style="margin-left: 10px;" onclick="window.print()" target="_blank">
+                    <button type="button" class="btn btn-success">
+                        <span class="btn-inner--icon"><i class="fas fa-print"></i> Print Certificate</span>
+                    </button>
+                </a>
+            </div>
+            
             <p class="text-muted">{{__('Print and share your certificate')}}</p>
 
         </div>
@@ -51,11 +61,7 @@
 
             @endif
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="window.print()" target="_blank">
-                    <button type="button" class="btn rounded-circle btn-success btn-icon-only">
-                        <span class="btn-inner--icon"><i class="fas fa-print"></i></span>
-                    </button>
-                </a>
+                
             </li>
 
 
@@ -63,41 +69,23 @@
 
     </div>
 
-    <div class=" col-lg-8 col-12 mx-auto mt-5 me-auto ms-auto mb-5">
-        <div class="col-md-10">
 
-            <div class="card border-5 border-radius-sm" @if(!empty( $certificate->background_color))
-            style="background-color:
-            {{ $certificate->background_color}};border-color: {{ $certificate->border_color}}"
-
-                    @endif
-            >
-
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <div class="card certificate-card">
                 <div class="card-body">
-
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h4 class=" mt-4">
-                                @if(!empty( $certificate->logo))
-                                    <img src="{{ url('public') }}/uploads/{{ $certificate->logo}}"
-                                         class="w-50">
-                                @else
-                                    {{__(' Company logo')}}
-                                @endif
-                            </h4>
-                            <p class="mb-3">
-                                <small> {{__('Certificate of Completion')}}</small>
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-
-                        </div>
-
-
-                    </div>
-
-                    <h2>
-                        @if(!empty( $certificate_received->student_id))
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <div  class="logo_text d-flex certificate">
+                                <img style="width: 60px;height: 60px;" src="{{ url('public') }}/uploads/{{$super_settings['favicon']}}" width="100px">
+                                <h2>Cake Uncle Academy of Pastry Arts</h2>
+                            </div>
+                            <div class="certificate-heading text-center">
+                                <h2>Certificate</h2>
+                                <p>Of </p>
+                            </div>
+                            <div class="certificate-description text-center mt-4">
+                                <p>To Whom It May Concern <br> This is to certify that <br>@if(!empty( $certificate_received->student_id))
 
                             @if(!empty($students[ $certificate_received->student_id]))
                                 @if(isset($students[ $certificate_received->student_id]))
@@ -106,17 +94,10 @@
                             @endif
 
 
-                        @endif
-
-
-
-                    </h2>
-
-                    <p class="">
-                        <small>{{__('has successfully completed the course')}} </small>
-                    </p>
-                    <h5 class="h6 text-decoration-underline">
-                        @if(!empty( $certificate->course_id))
+                        @endif<br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>
+                                <p class="employe_des">
+                                    <br>
+                                    <span>Certificate of :</span>@if(!empty( $certificate->course_id))
 
                             @if(!empty($courses[ $certificate->course_id]))
                                 @if(isset($courses[ $certificate->course_id]))
@@ -124,26 +105,31 @@
                                 @endif
                             @endif
 
-                        @endif
-                    </h5>
-                    <p class="">
-                        <small> {{__('on february 23, 2022')}}</small>
-                    </p>
-
-                    <p class="reason mb-4">
-                        <br/>
-
-                    </p>
-
+                        @endif<br>
+                                </p>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="certificate-date">
+                                        <p>Date: 16/Dec/2022</p>
+                                        <p>Place: Chandigarh</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="certificate-manager">
+                                        <p><span>Jaspreet Kaur</span><br>Manager-HR</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="certificate-sign">
+                                        <p><br><span>Signature</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-
-
             </div>
-
         </div>
     </div>
-
-
 @endsection
