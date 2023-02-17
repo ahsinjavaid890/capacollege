@@ -61,49 +61,44 @@
                         <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Check our new courses')}}</h1>
                     </div>
                 </div>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        @foreach($courses as $course)
-                        @if($course->status !='Draft')
-                        <div class="swiper-slide">
-                            <div class="card card-plain card-blog">
-                                <div class="card-image border-radius-lg position-relative zoom-effect-container"> 
-                                    <a href="javascript:;" class="image-card">
-                                        @if(empty($course->image))
-                                            <img src="{{ url('public') }}/img/placeholder.jpeg"
-                                                 class="w-100 border-radius-lg move-on-hover shadow ">
-                                        @else
-                                            <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow ">
+                <div id="course-slider" class="owl-carousel">
+                    @foreach($courses as $course)
+                    @if($course->status !='Draft')
+                    <div class="testimonial-item equal-height style-6" style="height: 254px;">
+                        <div class="card card-plain card-blog">
+                            <div class="card-image border-radius-lg position-relative zoom-effect-container"> 
+                                <a href="javascript:;" class="image-card">
+                                    @if(empty($course->image))
+                                        <img src="{{ url('public') }}/img/placeholder.jpeg"
+                                             class="w-100 border-radius-lg move-on-hover shadow ">
+                                    @else
+                                        <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow ">
+                                    @endif
+
+                                </a>
+                            </div>
+                            <div class="card-body px-2">
+                                <h5>
+                                    <a href="{{ url('course')}}/{{$course->slug}}" class="text-dark font-weight-bold">{{$course->name}}</a>
+                                </h5>
+                                <div class=" pb-0">
+                                    <!-- Badge and favorite -->
+                                    <div class="d-flex justify-content-between mb-2">
+                                        @if(!empty($categories[$course->category_id]))
+                                            <span class="badge bg-purple-light">
+                                         @if(isset($categories[$course->category_id]))
+                                                    {{$categories[$course->category_id]->name}}
+                                                @endif
+                                            </span>
                                         @endif
 
-                                    </a>
-                                </div>
-                                <div class="card-body px-2">
-                                    <h5>
-                                        <a href="{{ url('course')}}/{{$course->slug}}" class="text-dark font-weight-bold">{{$course->name}}</a>
-                                    </h5>
-                                    <div class=" pb-0">
-                                        <!-- Badge and favorite -->
-                                        <div class="d-flex justify-content-between mb-2">
-                                            @if(!empty($categories[$course->category_id]))
-                                                <span class="badge bg-purple-light">
-                                             @if(isset($categories[$course->category_id]))
-                                                        {{$categories[$course->category_id]->name}}
-                                                    @endif
-                                                </span>
-                                            @endif
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        @endif
-                        @endforeach
                     </div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                    @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -159,10 +154,9 @@
                         <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
                     </div>
                 </div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
+                <div id="testimonial-slider" class="owl-carousel">
                 @foreach(DB::table('testimonials')->get() as $r)
-                    <div class="swiper-slide">
+                    <div class="testimonial-item equal-height style-6" style="height: 254px;">
                         <div class="testimonial-two text-center">
                             <div class="testimonial-two_quote">
                                 <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
@@ -170,7 +164,7 @@
                                 </svg>
                             </div>
                             <p class="testimonial-two_text">
-                                {{ Str::limit($r->testimonial , 250); }}
+                                {{ Str::limit($r->testimonial , 150); }}
                             </p>
                             <div class="testimonial-two_image">
                                 <img width="56" height="56" src="{{ url('public/images') }}/{{ $r->image }}" alt="Author">
@@ -182,94 +176,37 @@
                     </div>
                 @endforeach
                 </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
             </div>
         </div>
     </section>
     <section class="py-6 bg-gray-100">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-12 text-center">
-                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Student Prenuer')}}</h1>
-                </div>
-            </div>
-            <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    @foreach($studentprenuer as $studentprenuers)
-                        <div class="swiper-slide">
-                            <div class="card blog-card">
-                                <div class="card-header p-0 position-relative z-index-1">
-                                    @if(empty($studentprenuers->image))
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="student-slider" class="owl-carousel">
+
+                            @foreach($studentprenuer as $studentprenuers)
+                        <div class="testimonial-item equal-height style-6" style="height: 254px;">
+                            <div class="testimonial-image cell-left">
+                                @if(empty($studentprenuers->image))
                                     <img src="{{ url('public') }}/img/placeholder.jpeg"
-                                             class="w-100 border-radius-lg move-on-hover shadow mt-3">
-                                    @else
-                                        <img src="{{ url('public/images') }}/{{ $studentprenuers->image }}" class="img-fluid border-radius-lg">
-                                    @endif
-                                </div>
-                                <div class="card-body pt-3">
-                                    <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">{{$studentprenuers->bakery_name}}</span>
-                                    <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
-                                        {{$studentprenuers->name}}
-                                    </p>
+                                         class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                                @else
+                                    <img src="{{ url('public/images') }}/{{ $studentprenuers->image }}" class="img-fluid border-radius-lg">
+                                @endif
+                            </div>
+                            <div class="cell-right">
+                                    <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">{{$studentprenuers->bakery_name}}</span>
+                                        <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
+                                            {{$studentprenuers->name}}
+                                        </p>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                  </div>
-
-                  <div class="swiper-pagination"></div>
-
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                </div>
-        </div>
-    </section>
-    <section class="py-6">
-        <div class="container">
-            <div class="row">
-        <div class="col-md-12">
-            <div id="testimonial-slider" class="owl-carousel">
-
-                    @foreach($studentprenuer as $studentprenuers)
-                <div class="testimonial-item equal-height style-6" style="height: 254px;">
-                    <div class="testimonial-image cell-left">
-                        @if(empty($studentprenuers->image))
-                            <img src="{{ url('public') }}/img/placeholder.jpeg"
-                                 class="w-100 border-radius-lg move-on-hover shadow mt-3">
-                        @else
-                            <img src="{{ url('public/images') }}/{{ $studentprenuers->image }}" class="img-fluid border-radius-lg">
-                        @endif
-                    </div>
-                    <div class="cell-right">
-                        <div class="testimonial-name">{{$studentprenuers->name}}
-                        </div>
-                        <div class="testimonial-job">{{$studentprenuers->bakery_name}}</div>
-                    </div>
-                    <div class="testimonial-content quote"><i class="fa fa-quote-left">  
-                        </i>This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. 
-                    </div>
-                </div>
-                @endforeach
-                <div class="testimonial-item equal-height style-6" style="height: 254px;">
-                    <div class="testimonial-image cell-left">
-                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Rose">
-                    </div>
-                    <div class="cell-right">
-                        <div class="testimonial-name">Rose
-                        </div>
-                        <div class="testimonial-job">Gardener
-                        </div>
-                    </div>
-                    <div class="testimonial-content quote"><i class="fa fa-quote-left">  
-                        </i>This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. This is a short bio about rose. 
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
         </div>
     </section>
 @endsection
@@ -336,7 +273,35 @@
     <script type="text/javascript">
             $(document).ready(function(){
     $("#testimonial-slider").owlCarousel({
+        items:3,
+        itemsDesktop:[1000,6],
+        itemsDesktopSmall:[980,1],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:true,
+        navigationText:["<",">"],
+        autoPlay:true
+    });
+});
+    </script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+    $("#student-slider").owlCarousel({
         items:6,
+        itemsDesktop:[1000,6],
+        itemsDesktopSmall:[980,1],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:true,
+        navigationText:["<",">"],
+        autoPlay:true
+    });
+});
+    </script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+    $("#course-slider").owlCarousel({
+        items:3,
         itemsDesktop:[1000,6],
         itemsDesktopSmall:[980,1],
         itemsTablet:[768,1],
