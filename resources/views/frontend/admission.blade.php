@@ -29,7 +29,7 @@
        <div  class="col-md-6">
            <div style="padding: 10px;">
                 <h2 class="mb-4" style="text-align:left;color: #64317C;">For Indian students</h2>
-               <ul class="custom-list">
+               <ul style="padding-left: 20px;" class="custom-list">
               <li>Students going abroad for study or work basis</li>
               <br>
               <li>While taking business loan (Start-up) to open a bakery</li>
@@ -48,7 +48,7 @@
        </div>
        <div class="col-md-6">
            <div class="admissionimage">
-               <img src="https://ik.imagekit.io/uq2abzttxf/img/featured/770x434.jpg?tr=w-600,h-338">
+               <img src="{{ url('public/images/admission1.jpg') }}">
            </div>
        </div>
    </div>
@@ -57,14 +57,14 @@
     
    <div style="background-color: #f4f4f4;" class="row">
     <div class="col-md-6">
-           <div class="admissionimage">
-               <img src="https://i.pinimg.com/originals/04/15/28/04152878331eaeb0bda0a1f747e7cb07.jpg">
+           <div style="text-align:center;" class="admissionimage">
+               <img src="{{ url('public/images/admission2.jpg') }}">
            </div>
        </div>
        <div  class="col-md-6">
            <div style="padding: 10px;">
                 <h2 class="mb-4" style="text-align:left;color: #64317C;">For International students</h2>
-               <ul class="custom-list">
+               <ul style="padding-left: 20px;" class="custom-list">
               <li>Students going abroad for study or work basis</li>
               <br>
               <li>While taking business loan (Start-up) to open a bakery</li>
