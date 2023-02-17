@@ -67,7 +67,7 @@
             color: #fff;
             border-radius: 30px;
             height: 61px;
-            width: 50%;
+            width: 33%;
         }
 
     .gallery_section ul.tabs li.current{
