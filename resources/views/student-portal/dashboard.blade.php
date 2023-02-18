@@ -64,15 +64,6 @@
                                                 <strong>{{$course->name}}</strong>
                                             </h5>
                                         </a>
-                                        <div class="row mb-0">
-                                            <div class="col">
-                                                {!! renderRating($course->id) !!}
-                                            </div>
-                                            <div class="col text-end me-2">
-                                                {!! getCourseRating($course->id) !!}.0/5.0
-
-                                            </div>
-                                        </div>
                                         <div class=" pt-0 pb-3">
                                             <hr>
                                             <div class="d-flex justify-content-between">
@@ -132,7 +123,6 @@
                                             <h5 class="card-title mb-0">
                                                 <a href="/student/view-ebook?id={{$product->id}}" class="">{{$product->name}}</a>
                                             </h5>
-                                            {!! renderEbookRating($product->id) !!}
                                         </div>
 
 

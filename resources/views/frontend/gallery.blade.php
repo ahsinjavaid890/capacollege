@@ -59,6 +59,7 @@
             margin: auto;
         }
     .gallery_section ul.tabs li{
+            margin-right: 26px;
             font-weight: bold;
             padding-top: 17px;
             text-align: center;
@@ -67,7 +68,7 @@
             color: #fff;
             border-radius: 30px;
             height: 61px;
-            width: 50%;
+            width: 44%;
         }
 
     .gallery_section ul.tabs li.current{

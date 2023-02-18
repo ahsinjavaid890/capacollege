@@ -232,19 +232,6 @@
                                             <p class="mb-0 small"></p>
                                         </div>
                                     </div>
-
-                                    <!-- Rating and follow -->
-                                    <div class="d-sm-flex justify-content-sm-between align-items-center mt-0 mt-sm-2">
-                                        <!-- Rating star -->
-                                        <div class="row mb-0">
-                                            {!! renderRating($course->id) !!}
-
-                                        </div>
-
-                                        <!-- button -->
-
-                                        <a href="{{ url('create-course')}}?id={{$course->id}}" class="btn btn-sm btn-blue mb-0 mt-2 mt-sm-0">{{__('Edit Course')}}</a>
-                                    </div>
                                 </div>
                                 <!-- Course info END -->
                             </div>

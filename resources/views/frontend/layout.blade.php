@@ -91,7 +91,7 @@
                     </a>
                 </li>
                 <li class="nav-item  ms-lg-auto mx-1">
-                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-5" href="{{ url('blog') }}">
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="{{ url('blog') }}">
 
                         {{__('News')}}
 

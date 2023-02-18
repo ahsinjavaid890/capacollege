@@ -291,52 +291,9 @@
 
                                         </div>
                                     </div>
-
-                                    <!-- Rating and follow -->
-                                    <div class="d-sm-flex justify-content-sm-between align-items-center mt-0 mt-sm-2">
-                                        <!-- Rating star -->
-
-                                        <div class="rating text-warning">
-                                            @if($rating_out_of_five > 0)
-                                                <i class="fas fa-star" aria-hidden="true"></i>
-                                            @else
-                                                <i class="far fa-star" aria-hidden="true"></i>
-                                            @endif
-
-                                            @if($rating_out_of_five > 1)
-                                                <i class="fas fa-star" aria-hidden="true"></i>
-                                            @else
-                                                <i class="far fa-star" aria-hidden="true"></i>
-                                            @endif
-
-                                            @if($rating_out_of_five > 2)
-                                                <i class="fas fa-star" aria-hidden="true"></i>
-                                            @else
-                                                <i class="far fa-star" aria-hidden="true"></i>
-                                            @endif
-
-                                            @if($rating_out_of_five > 3)
-                                                <i class="fas fa-star" aria-hidden="true"></i>
-                                            @else
-                                                <i class="far fa-star" aria-hidden="true"></i>
-                                            @endif
-
-                                            @if($rating_out_of_five > 4)
-                                                <i class="fas fa-star" aria-hidden="true"></i>
-                                            @else
-                                                <i class="far fa-star" aria-hidden="true"></i>
-                                            @endif
-
-
-                                        </div>
-
-                                        <!-- button -->
-                                        <button  class="btn btn-sm btn-success mb-0 mt-2 mt-sm-0" data-bs-toggle="modal" data-bs-target="#review">{{__('Review')}}</button>
-
-                                    </div>
                                     <!-- Course info END -->
                                 </div>
-                                <div class="modal fade" id="review" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <!-- <div class="modal fade" id="review" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <form action="{{ url('student/save-review')}}" method="post">
 
                                         <div class="modal-dialog">
@@ -355,14 +312,6 @@
                                                             </ul>
                                                         </div>
                                                     @endif
-                                                    <label for="exampleFormControlTextarea1" class="form-label">{{__("Your Rating")}}</label>
-                                                    <div class="rating text-warning">
-                                                        <i class=" rating__star far  fa-star" ></i>
-                                                        <i class=" rating__star far  fa-star" ></i>
-                                                        <i class=" rating__star far  fa-star" ></i>
-                                                        <i class=" rating__star far fa-star" ></i>
-                                                        <i class=" rating__star far  fa-star" ></i>
-                                                    </div>
 
                                                     <div class="mb-2 mt-3">
                                                         <label for="exampleFormControlTextarea1" class="form-label">{{__('Write your Review')}}</label>
@@ -385,7 +334,7 @@
                                         </div>
                                     </form>
                                 </div>
-
+ -->
 
                                 <!-- Tags START -->
                                 <div class="col-md-6 col-xl-12">

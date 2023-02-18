@@ -1,7 +1,6 @@
 @extends('layouts.student-portal')
 @section('title',$product->name)
 @section('content')
-
     <div class="row g-4 g-sm-5">
         <!-- Left sidebar START -->
         <div class="col-xl-4">
@@ -148,61 +147,7 @@
         <!-- Main content END -->
     </div>
 
-    
-{{--<!-- Modal -->--}}
-
-
-    <div class="modal fade" id="review" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <form action="{{ url('student/save-ebook-review')}}" method="post">
-
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">{{__('Review this book')}}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body">
-                        @if ($errors->any())
-                            <div class="alert bg-pink-light text-danger">
-                                <ul class="list-unstyled">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <label for="exampleFormControlTextarea1" class="form-label">{{__("Your Rating")}}</label>
-
-                            <div class="rating text-warning">
-                                <i class=" rating__star far  fa-star" ></i>
-                                <i class=" rating__star far  fa-star" ></i>
-                                <i class=" rating__star far  fa-star" ></i>
-                                <i class=" rating__star far fa-star" ></i>
-                                <i class=" rating__star far  fa-star" ></i>
-                            </div>
-                        <div class="mb-2 mt-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">{{__('Write your Review')}}</label>
-                            <textarea class="form-control" name="review" id="exampleFormControlTextarea1" rows="4">{{$review->review ?? old('review') ?? ''}}</textarea>
-
-                        </div>
-                            <input type="hidden" id="star_count" name="star_count" value="{{$review->star_count ?? ''}}">
-
-                    </div>
-
-                    @csrf
-
-                    <input type="hidden" name="product_id" value="{{$product->id}}">
-
-                    <div class="ms-3 mb-4">
-                        <button type="button" class="btn btn-sm bg-pink-light text-danger shadow-none" data-bs-dismiss="modal">{{__('Cancel')}}</button>
-                        <button type="submit" class="btn btn-sm bg-purple-light text-purple shadow-none">{{__('Save Review')}}</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-
+ 
 @endsection
 
 

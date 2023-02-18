@@ -39,14 +39,13 @@
                         <h5 class="card-title mb-0">
                             <a href="{{ url('student/view-ebook')}}?id={{$product->id}}" class="">{{$product->name}}</a>
                         </h5>
-                        {!! renderrecipesRating($product->id) !!}
                     </div>
 
 
                     <!-- Card footer -->
                     <div class="card-footer pt-0 px-3">
                         <div class="d-flex justify-content-between align-items-center">
-                                                                        <span class="h6 fw-light mb-0">{{__('By')}} <span class="fw-bolder">{{$product->author_name}}</span> </span>
+                            <span class="h6 fw-light mb-0">{{__('By')}} <span class="fw-bolder">{{$product->author_name}}</span> </span>
                         <!-- Price -->
                             <h5 class="text-success mb-0">
                                 INR {{$product->price}}

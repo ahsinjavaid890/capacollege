@@ -179,7 +179,7 @@
             </div>
         </div>
     </section>
-    <section class="py-6 bg-gray-100">
+    <section class="py-6 bg-gray-100 studentprenuer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

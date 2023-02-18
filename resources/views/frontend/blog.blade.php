@@ -1,5 +1,5 @@
 @extends('frontend.layout')
-@section('title','Blog')
+@section('title','News')
 @section('content')
 <section class="">
     <div class="bg-dark-alt position-relative">

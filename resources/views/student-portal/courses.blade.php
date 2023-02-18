@@ -49,16 +49,6 @@
                                 <strong>{{$course->name}}</strong>
                             </h5>
                         </a>
-                        <div class="row mb-0">
-                            <div class="col">
-                                {!! renderRating($course->id) !!}
-                            </div>
-                            <div class="col text-end me-2">
-                                {!! getCourseRating($course->id) !!}.{{__('0/5.0')}}
-
-                            </div>
-
-                        </div>
                         <div class=" pt-0 pb-3">
                             <hr>
                             <div class="d-flex justify-content-between">

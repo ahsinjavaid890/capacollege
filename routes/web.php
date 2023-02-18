@@ -77,10 +77,6 @@ Route::get("deletestudentprenuer/{id}", [AdminController::class, "deletestudentp
 
 
 
-
-
-
-
 Route::get("/termspage", [AdminController::class, "termsPage"]);
 Route::get("/privacypage", [AdminController::class, "privacyPage"]);
 Route::get("/contactpage", [AdminController::class, "contactPage"]);

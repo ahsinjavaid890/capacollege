@@ -39,42 +39,62 @@
             </div>
         </div>
     </div>
-    <section class="py-6"style="background-color: #f3dfe8;">
+    <section class="py-6 bg-gray-100 team_member">
         <div class="testimonial-active-two my-0 mx-auto" >
-            <div class="viewall_btn text-end">
-                <a href="{{ url('testimonial') }}" class="btn btn-blue">View All</a>
-            </div>
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-lg-12 text-center">
-                        <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
+                        <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Team Member')}}</h1>
                     </div>
                 </div>
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        @foreach(DB::table('testimonials')->get() as $r)
-                        <div class="swiper-slide">
-                            <div class="testimonial-two text-center">
-                                <div class="testimonial-two_quote">
-                                    <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z" fill="currentColor" fill-rule="nonzero"></path>
-                                    </svg>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="member-image cell-left">
+                                    <img src="{{ url('public/img/niharika.jpeg') }}" class="img-fluid border-radius-lg">
                                 </div>
-                                <p class="testimonial-two_text">
-                                    {{ Str::limit($r->testimonial , 150); }}
-                                </p>
-                                <div class="testimonial-two_image">
-                                    <img width="56" height="56" src="{{ url('public/images') }}/{{ $r->image }}" alt="Author">
+                                <div class="member-name">
+                                    <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Co Founder</span>
+                                        <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
+                                            Niharika Rajput
+                                        </p>
+                                    </div>
                                 </div>
-                                <span class="testimonial-two_name">
-                                    {{ $r->name }}
-                                </span>
                             </div>
                         </div>
-                        @endforeach
-                        <!-- Testimonial Item End -->
-                        <!-- swiper-slide end-->
-
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="member-image cell-left">
+                                    <img src="{{ url('public/img/chitaniya.jpeg') }}" class="img-fluid border-radius-lg">
+                                </div>
+                                <div class="member-name">
+                                    <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Co Founder</span>
+                                        <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
+                                            Chaitanya Rajput
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="member-image cell-left">
+                                    <img src="{{ url('public/img/jaspreet.jpeg') }}" class="img-fluid border-radius-lg">
+                                </div>
+                                <div class="member-name">
+                                    <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Executive Chef</span>
+                                        <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
+                                            Ms. Jaspreet Kaur
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

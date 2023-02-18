@@ -45,6 +45,7 @@
                     <div class="contact-section2_formbg">
                         <h2 class="contact-section2_form__title">Say Something...</h2>
                         <form class="contact-section2_form" id="contact-form" action="assets/php/mail.php" method="post" novalidate="novalidate">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6 col-6 form-p">
                                     <div class="form-group">
