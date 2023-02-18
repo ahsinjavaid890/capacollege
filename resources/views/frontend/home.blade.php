@@ -107,36 +107,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 style="text-align: center;color: #64317c; font-size: 33px;">Why Choose Us ? </h3>
+                    <div class="text-center">
+                        <h3 style="text-align: center;color: white; font-size: 33px;">Why Choose Us ? </h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="custom-list">
+                              <li>Career Consultancy Free</li>
+                              <li>Business Guidance</li>
+                              <li>Hands on practice for each student</li>
+                              <li>Tools kit provided free to every student</li>
+                              <li>Dress provided free to every student</li>
+                              <li>Extra classes to students if required</li>
+                              <li>Emi options to all the students</li>
+                            </ul>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <ul class="custom-list">
-                                      <li>Career Consultancy Free</li>
-                                      <li>Business Guidance</li>
-                                      <li>Hands on practice for each student</li>
-                                      <li>Tools kit provided free to every student</li>
-                                      <li>Dress provided free to every student</li>
-                                      <li>Extra classes to students if required</li>
-                                      <li>Emi options to all the students</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="custom-list">
-                                      
-                                      <li>Cakeuncle Franchise free to our student for first year to help getting business online</li>
-                                      <li>Digital Marketing Classes provided to students for thier startups</li>
-                                      <li>One year membership free to all our students for doubts or query related to the course.</li>
-                                      <li>Check your certificate online here anytime</li>
-                                      <li>We give you access to all our recipes online</li>
-                                      <li>That's it buddy what all you need 👍😊</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
+                        <div class="col-md-6">
+                            <ul class="custom-list">
+                              
+                              <li>Cakeuncle Franchise free to our student for first year to help getting business online</li>
+                              <li>Digital Marketing Classes provided to students for thier startups</li>
+                              <li>One year membership free to all our students for doubts or query related to the course.</li>
+                              <li>Check your certificate online here anytime</li>
+                              <li>We give you access to all our recipes online</li>
+                              <li>That's it buddy what all you need 👍😊</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -181,6 +176,11 @@
     </section>
     <section class="py-6 bg-gray-100 studentprenuer">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Student Prenuer')}}</h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div id="student-slider" class="owl-carousel">
@@ -204,6 +204,19 @@
                             </div>
                         </div>
                         @endforeach
+                        <div class="testimonial-item equal-height style-6" style="height: 254px;">
+                            <div class="testimonial-image cell-left">
+                                <img src="{{ url('public') }}/img/placeholder.jpeg" class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                                
+                            </div>
+                            <div class="cell-right">
+                                    <!-- <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">{{$studentprenuers->bakery_name}}</span> -->
+                                        <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
+                                            Next is You 
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

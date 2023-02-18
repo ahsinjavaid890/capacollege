@@ -30,7 +30,7 @@
     <div class="">
         <ul class="nav  mt-2 ">
             <li class="nav-item">
-                <a class="nav-link  fw-bolder" aria-current="page" href="/student-about?id={{$student->id}}">{{__('About')}}</a>
+                <a class="nav-link  fw-bolder" aria-current="page" href="{{ url('student-about')}}?id={{$student->id}}">{{__('About')}}</a>
             </li>
             <li class="nav-item">
                 <a href="{{ url('student-courses')}}?id={{$student->id}}" class="nav-link  fw-bolder" href="">{{__('Courses')}}</a>

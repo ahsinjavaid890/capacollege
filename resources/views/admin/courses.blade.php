@@ -56,7 +56,7 @@
                                     @endif
                                 </div>
                                 <div class="d-flex flex-column justify-content-center ms-3">
-                                    <a href="/view-course?id={{$course->id}}" class="text-dark font-weight-normal"> <h6 class=" mb-0 ">{{$course->name}}</h6></a>
+                                    <a href="{{ url('view-course')}}?id={{$course->id}}" class="text-dark font-weight-normal"> <h6 class=" mb-0 ">{{$course->name}}</h6></a>
 
                                 </div>
                             </div>

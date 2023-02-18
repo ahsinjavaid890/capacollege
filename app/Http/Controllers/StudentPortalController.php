@@ -52,7 +52,7 @@ class StudentPortalController extends StudentBaseController
     public function dashboard(Request $request)
     {
         $this->auth();
-
+ 
         $student = false;
         if ($this->student) {
             $student = $this->student;

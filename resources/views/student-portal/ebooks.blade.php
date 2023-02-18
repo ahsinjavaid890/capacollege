@@ -9,7 +9,7 @@
                     </span>
             </h5>
             <p class="text-muted">{{__('All of my recipes')}}</p>
-
+ 
         </div>
         <div class="col text-end">
             <a href="{{ url('shop')}}" type="button" class="btn btn-success text-white text-white"><i class="fas fa-plus"></i> {{__('Buy More ')}}</a>
@@ -37,7 +37,7 @@
                     <div class="card-body text-center px-3">
                         <!-- Title -->
                         <h5 class="card-title mb-0">
-                            <a href="{{ url('student/view-ebook')}}?id={{$product->id}}" class="">{{$product->name}}</a>
+                            <a href="{{ url('view-ebook')}}?id={{$product->id}}" class="">{{$product->name}}</a>
                         </h5>
                     </div>
 

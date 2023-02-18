@@ -86,24 +86,22 @@
                             </div>
                             <div class="certificate-description text-center mt-4">
                                 <p>To Whom It May Concern <br> This is to certify that <br>@if(!empty( $certificate_received->student_id))
-
-                            @if(!empty($students[ $certificate_received->student_id]))
-                                @if(isset($students[ $certificate_received->student_id]))
-                                    {{$students[ $certificate_received->student_id]->first_name}}  {{$students[ $certificate_received->student_id]->last_name}}
+                                @if(!empty($students[ $certificate_received->student_id]))
+                                    @if(isset($students[ $certificate_received->student_id]))
+                                        {{$students[ $certificate_received->student_id]->first_name}}  {{$students[ $certificate_received->student_id]->last_name}}
+                                    @endif
                                 @endif
                             @endif
+                            <br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>
+                            <p class="employe_des">
+                                <br>
+                                <span>Certificate of :</span>@if(!empty( $certificate->course_id))
 
-
-                        @endif<br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>
-                                <p class="employe_des">
-                                    <br>
-                                    <span>Certificate of :</span>@if(!empty( $certificate->course_id))
-
-                            @if(!empty($courses[ $certificate->course_id]))
-                                @if(isset($courses[ $certificate->course_id]))
-                                    {{$courses[ $certificate->course_id]->name}}
-                                @endif
+                        @if(!empty($courses[ $certificate->course_id]))
+                            @if(isset($courses[ $certificate->course_id]))
+                                {{$courses[ $certificate->course_id]->name}}
                             @endif
+                        @endif
 
                         @endif<br>
                                 </p>

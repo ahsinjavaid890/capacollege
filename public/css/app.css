@@ -632,6 +632,9 @@ li:hover > .glowing-circle {
 .custom-list > li{
     position: relative;
     font-size: 14px;
+    color: white;
+    line-height: 24px;
+    font-weight: 700;
 }
 .custom-list > li:before{
     content: "";
@@ -838,7 +841,7 @@ i.fa.fa-quote-left {
 .studentprenuer .testimonial-item.equal-height.style-6 {
     background-color: #fff;
     margin: 10px;
-    height: 261px !important;
+    height: 242px !important;
 }
 .studentprenuer .owl-carousel .owl-item img {
     display: block;
@@ -848,7 +851,7 @@ i.fa.fa-quote-left {
 .member-image img{
     border-radius: 12px 12px 0px 0px !important;
     width: 100%;
-    height: 270px;
+    height: 357px;
 }
 .member-name{
     padding-top: 16px;
