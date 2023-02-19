@@ -43,7 +43,7 @@
 
                             <div class="card-body pt-3">
                                 <h4 class="mb-3">
-                                    <a href="{{ url('blog')}}/{{$blog->slug}}" class="text-darker font-weight-bolder">
+                                    <a href="{{ url('news')}}/{{$blog->slug}}" class="text-darker font-weight-bolder">
                                         {{$blog->title}}
                                     </a>
                                 </h4>

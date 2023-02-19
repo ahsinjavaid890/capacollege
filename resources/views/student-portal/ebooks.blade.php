@@ -37,7 +37,7 @@
                     <div class="card-body text-center px-3">
                         <!-- Title -->
                         <h5 class="card-title mb-0">
-                            <a href="{{ url('view-ebook')}}?id={{$product->id}}" class="">{{$product->name}}</a>
+                            <a href="{{ url('student/view-ebook')}}?id={{$product->id}}" class="">{{$product->name}}</a>
                         </h5>
                     </div>
 

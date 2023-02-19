@@ -119,7 +119,7 @@ class CertificateController extends BaseController
         if (!empty($path)) {
             $certificate->logo = $path;
         }
-
+        $certificate->type = $request->type;
         $certificate->title = $request->title;
         $certificate->course_id = $request->course_id;
         $certificate->border_color = $request->border_color;

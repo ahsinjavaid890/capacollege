@@ -14,7 +14,14 @@
             flex-wrap: nowrap;
         }
     }
-
+    @media only screen and (max-width: 767px){
+        .gallery_section ul.tabs{
+            width: 100% !important;
+        }
+        .gallery_section ul.tabs li{
+            width: 40% !important;
+        }
+    }
     .cardgallaery {
         position: relative;
         width: 250px;

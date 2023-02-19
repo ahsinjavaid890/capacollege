@@ -144,14 +144,9 @@ class StudentController extends BaseController
             )->first();
         }
 
-        $courses = CertificateTemplate::all()
-            ->keyBy("id")
-            ->all();
+        $courses = CertificateTemplate::all();
 
-        $course_purchaseds = CertificateReceive::all()
-            ->keyBy("id")
-            ->all();
-
+        $course_purchaseds = CertificateReceive::where('student_id' , $request->id)->get(); 
         return \view("student.certificate-view-student", [
             "selected_navigation" => "students",
             "selected_nav" => "student-certificate",

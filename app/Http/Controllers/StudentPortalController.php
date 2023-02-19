@@ -778,12 +778,8 @@ class StudentPortalController extends StudentBaseController
         }
         $certificate_received = false;
         if ($request->id) {
-            $certificate_received = CertificateReceive::where(
-                "id",
-                $request->id
-            )->first();
+            $certificate_received = CertificateReceive::where("certificate_id",$request->id)->first();
         }
-
         return \view("student-portal.view-certificate", [
             "selected_navigation" => "student-certificate",
             "certificate" => $certificate,

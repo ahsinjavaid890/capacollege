@@ -107,7 +107,7 @@
                         <thead class="bg-gray-100">
                         <tr>
                             <th class="text-uppercase  text-xs font-weight-bolder">{{__('Name')}}</th>
-
+                            <th class="text-uppercase  text-xs font-weight-bolder">{{__('Assigining Date')}}</th>
                             <th class="text-uppercase text-end  text-xs font-weight-bolder  ps-2">{{__('Action')}}</th>
                         </tr>
                         </thead>
@@ -115,16 +115,16 @@
                         @foreach($course_purchaseds as $course_purchase)
                             <tr>
                                 <td>
-                                    @if(!empty($courses[$course_purchase->certificate_id]))
-                                        <h6 class="text-sm">
-                                            @if(isset($courses[$course_purchase->certificate_id]))
-                                                {{$courses[$course_purchase->certificate_id]->title}}
-                                            @endif
-                                        </h6>
-                                    @endif
+                                    <h6 class="text-sm">
+                                        {{ DB::Table('certificate_templates')->where('id' , $course_purchase->certificate_id)->first()->title }}
+                                    </h6>
                                 </td>
 
-
+                                <td>
+                                    <h6 class="text-sm">
+                                        {{ date('d M Y', strtotime($course_purchase->created_at)) }}
+                                    </h6>
+                                </td>
 
                                 <td>
                                     <div class="text-end">

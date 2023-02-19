@@ -57,7 +57,7 @@
                                 <div class="member-name">
                                     <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Co Founder</span>
                                         <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
-                                            Niharika Rajput
+                                                Ms. Niharika Rajput
                                         </p>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                                 <div class="member-name">
                                     <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Co Founder</span>
                                         <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
-                                            Chaitanya Rajput
+                                           Mr. Chaitanya Rajput
                                         </p>
                                     </div>
                                 </div>

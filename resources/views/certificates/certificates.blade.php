@@ -13,8 +13,8 @@
 
         </div>
         <div class="col-md-6 text-end">
-            <a href="{{ url('createappreciationcertificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Create  Appreciation Certificate')}}</a>
-            <a href="{{ url('create-certificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Create Certificate')}}</a>
+            <a href="{{ url('createappreciationcertificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Appreciation Certificate')}}</a>
+            <a href="{{ url('create-certificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Course Certificate')}}</a>
 
         </div>
     </div>
@@ -27,6 +27,7 @@
 
 
                     <th class="text-uppercase  text-xs font-weight-bolder">{{__('Course')}}</th>
+                    <th class="text-uppercase  text-xs font-weight-bolder">{{__('Type')}}</th>
 
                     <th class="text-uppercase  text-xs font-weight-bolder ps-2">{{__('Created at')}}</th>
 
@@ -48,6 +49,13 @@
                                         {{$courses[$certificate->course_id]->name}}
                                     @endif
                                 </h6>
+                            @endif
+                        </td>
+                        <td>
+                            @if($certificate->type == 'appriciation')
+                            Appriciation Certificate Template
+                            @else
+                                Course Certificate Template
                             @endif
                         </td>
 

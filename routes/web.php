@@ -115,9 +115,9 @@ Route::get("/termsandconditions", [
     "termsCondition",
 ]);
 Route::get("/contact", [FrontendController::class, "contact"]);
-Route::get("/blog", [FrontendController::class, "blogs"]);
+Route::get("/news", [FrontendController::class, "blogs"]);
 
-Route::get("/blog/{slug}", [FrontendController::class, "viewArticle"]);
+Route::get("/news/{slug}", [FrontendController::class, "viewArticle"]);
 Route::get("/add-to-cart/{id}", [BillingController::class, "addToCart"]);
 Route::get("/remove-item-from-cart/{id}", [
     BillingController::class,
