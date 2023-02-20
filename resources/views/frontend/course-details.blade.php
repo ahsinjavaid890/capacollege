@@ -318,7 +318,7 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open text-info me-2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
 
-                                                {{__('Lessons')}}
+                                                {{__('Session')}}
                                             </span>
                                     <span>
                                             @if(!empty($course))
@@ -420,7 +420,7 @@
                     <div>
                         <!-- <h4 class="mb-5">{{__('Student Feedback')}}</h4> -->
                         @foreach($reviews as $review)
-                            <div class="d-flex mt-6">
+                            <!-- <div class="d-flex mt-6">
                                 <div>
                                     <a href="javascript:;">
                                         <div class="position-relative">
@@ -452,7 +452,6 @@
 
                                             @endif
                                         </h5>
-                                        <!-- Review star -->
                                         <div class="rating list-inline mb-0">
                                             @foreach(range(1,5) as $i)
                                                 @if($i <= $review->star_count)
@@ -471,7 +470,7 @@
                                     <p>{!! $review->review !!}</p>
 
                                 </div>
-                            </div>
+                            </div> -->
 
                         @endforeach
 

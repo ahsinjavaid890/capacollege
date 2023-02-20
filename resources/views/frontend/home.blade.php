@@ -103,12 +103,17 @@
             </div>
         </div>
     </section>
+    <style type="text/css">
+        .custom-list li{
+            color: white;
+        }
+    </style>
     <section class="mt-4 background-img why_choose" style=" background-image: url('{{ url('public/images/franchise.png')  }}');">
-        <div class="container">
+        <div class="container" style="position:relative;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h3 style="text-align: center;color: white; font-size: 33px;">Why Choose Us ? </h3>
+                        <h3 style="text-align: center;color: white;font-size: 33px;position: absolute;left: 35%;top: -63px;">Why Choose Us ? </h3>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -159,7 +164,7 @@
                                 </svg>
                             </div>
                             <p class="testimonial-two_text">
-                                {{ Str::limit($r->testimonial , 150); }}
+                                {{ Str::limit($r->testimonial , 130); }}
                             </p>
                             <div class="testimonial-two_image">
                                 <img width="56" height="56" src="{{ url('public/images') }}/{{ $r->image }}" alt="Author">
@@ -204,7 +209,7 @@
                             </div>
                         </div>
                         @endforeach
-                        <div class="testimonial-item equal-height style-6" style="height: 254px;">
+                        <div class="testimonial-item equal-height style-6 next_for_you" style="height: 254px;">
                             <div class="testimonial-image cell-left">
                                 <img src="{{ url('public') }}/img/placeholder.jpeg" class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                 

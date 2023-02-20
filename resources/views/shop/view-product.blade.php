@@ -157,10 +157,8 @@
                     @foreach($reviews as $review)
 
 
-                        <div class="row">
-                            <!-- Review item START -->
+                       <!--  <div class="row">
                             <div class="d-md-flex my-4">
-                                <!-- Avatar -->
                                 <div class="avatar  me-4 ">
                                     @if(!empty($students[$review->student_id]))
 
@@ -174,7 +172,6 @@
                                         @endif
                                     @endif
                                 </div>
-                                <!-- Text -->
                                 <div>
                                     <div class="d-sm-flex mt-1 mt-md-0 align-items-center">
                                         <h5 class="me-3 mb-0">
@@ -186,21 +183,17 @@
 
                                             @endif
                                         </h5>
-                                        <!-- Review star -->
                                         {!! renderEbookRating($product->id) !!}
                                     </div>
-                                    <!-- Info -->
                                     <p class="small mb-2">{{$review->updated_at->diffForHumans()}}</p>
                                     <p class="mb-2">{!! $review->review !!} </p>
 
-                                    <!-- Reply button -->
 
                                 </div>
                             </div>
-                            <!-- Divider -->
                             <hr>
 
-                        </div>
+                        </div> -->
                     @endforeach
 
                 </div>

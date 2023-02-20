@@ -6,7 +6,7 @@
         <div class="card rounded-3">
             <!-- Card header START -->
             <div class="card-header border-bottom">
-                <h4 class="mb-0">{{__('Lessons')}}</h4>
+                <h4 class="mb-0">{{__('Session')}}</h4>
             </div>
             <!-- Card header END -->
 

@@ -66,7 +66,7 @@
 
                         <div class="card-header border-bottom px-4 py-3">
 
-                            <h5 class="">{{__('Lesson Description')}}</h5>
+                            <h5 class="">{{__('Session Description')}}</h5>
                         </div>
                         <!-- Tabs END -->
 
@@ -108,7 +108,7 @@
                             <!-- Recently Viewed START -->
                             <div class="card card-body shadow  mb-4">
                                 <!-- Title -->
-                                <h6 class="mb-3">{{__('All Lessons of the course')}}</h6>
+                                <h6 class="mb-3">{{__('All Session of the course')}}</h6>
                                 <!-- Course item START -->
                                 <div class="row gx-3 mb-3">
 

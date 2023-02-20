@@ -62,7 +62,7 @@
                                         {!! getTotalLesson($course->id) !!}
 
 
-                                    @endif{{__('Lessons')}}</span>
+                                    @endif{{__('Session')}}</span>
                             </div>
                         </div>
 

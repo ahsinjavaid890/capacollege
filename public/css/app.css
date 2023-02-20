@@ -799,7 +799,7 @@ i.fa.fa-quote-left {
 .testimonial-item p {
     color: black !important;
     font-family: 'Inter' !important;
-    font-size: 18px !important;
+    font-size: 14px !important;
 }
 .owl-theme .owl-controls .owl-buttons .owl-prev{
     position: absolute;
@@ -858,4 +858,101 @@ i.fa.fa-quote-left {
 }
 .team_member .card{
     border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.certificate-container {
+    padding: 50px;
+    width: 100%;
+}
+.certificate {
+    border: 20px solid #64317c;
+    padding: 25px;
+    height: 100%;
+    position: relative;
+    border-radius: 13px;
+}
+
+.certificate:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 346px;
+    top: -52px;
+    width: 44%;
+    height: 100%;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+.certificate-header > .logo {
+    width: 80px;
+    height: 80px;
+}
+
+.certificate-title {
+    text-align: center;
+    font-size: 34px;
+    color: #6c4646;   
+}
+
+.certificate-body {
+    text-align: center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+
+.certificate-footer p{
+    font-size: 32px;
+    font-weight: 700;
+}
+.certificate-footer p span{
+    color: #64317c;
+}
+.student-name {
+    font-size: 24px;
+}
+
+.certificate-content {
+    margin: 0 auto;
+    width: 750px;
+}
+
+.about-certificate {
+    width: 380px;
+    margin: 0 auto;
+}
+
+.topic-description {
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.next_for_you{
+    position: fixed;
+    left: -420px;
+    width: 91%;
+}
+.next_for_you .testimonial-image img{
+    margin: 0 !important;
+    height: 157px !important;
 }

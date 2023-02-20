@@ -87,10 +87,10 @@
 
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 text-end">
+              <!--   <div class="col-md-4 mb-3 text-end">
                     <botton  class="btn btn-sm btn-success mb-0 mt-2 mt-sm-0" data-bs-toggle="modal" data-bs-target="#review">{{__('Review')}}</botton>
 
-                </div>
+                </div> -->
             </div>
 
 

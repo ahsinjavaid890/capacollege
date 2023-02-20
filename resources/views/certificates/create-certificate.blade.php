@@ -107,6 +107,7 @@
             </form>
         </div>
         <div class="col-md-12 mb-3">
+<<<<<<< Updated upstream
             <div class="card certificate-card">
                 <div class="card-body">
                     <div class="row ">
@@ -146,6 +147,47 @@
                                 <div class="col-md-4">
                                     <div class="certificate-sign">
                                         <p><br><span>Signature</span></p>
+=======
+            <div class="certificate-container">
+                <div class="certificate" >
+                    <div class="water-mark-overlay"></div>
+                    <div class="certificate-header">
+                        <img src="{{ url('public') }}/uploads/{{$super_settings['favicon']}}" class="logo" alt="">
+                    </div>
+                    <div class="certificate-body">
+                       
+                        <p class="certificate-title"><strong>Cake Uncle Academy of Pastry Arts</strong></p>
+                        <h1>Advance Diploma
+                        <p class="student-name">
+                            Amandeep Singh
+                        </p>
+                        <div class="certificate-content">
+                            <p class="topic-title" style="font-size: 32px;">
+                                was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: 
+                            </p>
+                            <div class="text-center">
+                                <p class="topic-description" style="font-size: 32px;">Certificate of : Advance Diploma in Patisserie - 1 year</p>
+                            </div>
+                        </div>
+                        <div class="certificate-footer text-muted">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="text-justify">Place: <span style="text-decoration: underline;">Chandigarh</span></p>
+                                    <p class="text-justify">Issue Date: <span style="text-decoration: underline;">16/Dec/2022</span></p>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>
+                                                Jaspreet Kaur : <span style="text-decoration: underline;"> Manager-HR</span>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>
+                                                Signature :_____________
+                                            </p>
+                                        </div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>

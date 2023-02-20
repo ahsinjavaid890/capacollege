@@ -15,11 +15,11 @@
         <div class="">
             <div class="row">
                 <div class="col-lg-6">
-              <h4>       {{__('Add lesson')}} {{__('for')}}   {{$course->name}}</h4>
+              <h4>       {{__('Add Session')}} {{__('for')}}   {{$course->name}}</h4>
 
                 </div>
                 <div class="col-lg-6 text-end d-flex flex-row">
-                    <a href="{{ url('create-lesson')}}?course_id={{$course->id}}" class="btn btn-info mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0">{{__('Add Lesson')}}</a>
+                    <a href="{{ url('create-lesson')}}?course_id={{$course->id}}" class="btn btn-info mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0">{{__('Add Session')}}</a>
 
                 </div>
             </div>
@@ -27,13 +27,13 @@
                 <div class="col-lg-8 mt-lg-0 mt-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="font-weight-bolder">{{__('Lesson Information')}}</h5>
+                            <h5 class="font-weight-bolder">{{__('Session Information')}}</h5>
                             <div class="row">
 
                             </div>
 
                             <div class="form-group">
-                                <label for="lessonTitle" class="form-label">{{__('Lesson Title')}}</label><label class="text-danger">*</label>
+                                <label for="lessonTitle" class="form-label">{{__('Session Title')}}</label><label class="text-danger">*</label>
                                 <input type="text" class="form-control" name="title" value="{{$lesson->title ?? old('title') ?? ''}}" id="lessonTitle">
 
                             </div>
@@ -43,7 +43,7 @@
                             </div>
                             <label for="basic-url" for="lessonSlug" class="form-label">{{__('Slug')}}</label>
                             <div class="input-group mb-3">
-                                <span class="input-group-text fw-bolder">{{config('app.url')}}/lesson/</span>
+                                <span class="input-group-text fw-bolder">{{config('app.url')}}/session/</span>
                                 <input type="text" value="{{$lesson->slug ?? old('slug') ?? ''}}" id="lessonSlug" name="slug" class="form-control ps-1">
                             </div>
 

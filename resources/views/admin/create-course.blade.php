@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                         <div class="mt-3">
-                            <label class="">{{__('Deadline')}}</label>
+                            <label class="">{{__('Last Day to Enroll')}}</label>
 
                             <input class="form-control" name="deadline" id="end_date"
                                    @if(!empty($course))value="{{$course->deadline}}"

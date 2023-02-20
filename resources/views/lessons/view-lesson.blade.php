@@ -36,7 +36,7 @@
                     @if(!empty($course->id))
                         <a class="btn btn-blue mb-3 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2 "
                            href="{{ url('create-lesson')}}?course_id={{$course->id}}&id={{$lesson->id}}" >
-                            {{__('Edit Lesson')}}
+                            {{__('Edit Session')}}
                         </a>
                     @endif
                 </div>
@@ -72,7 +72,7 @@
 
                         <div class="card-header border-bottom px-4 py-3">
 
-                            <h5 class="">{{__('Lesson Description')}}</h5>
+                            <h5 class="">{{__('Session Description')}}</h5>
                         </div>
                         <!-- Tabs END -->
 
@@ -127,7 +127,7 @@
                             <!-- Recently Viewed START -->
                             <div class="card card-body shadow p-4 mb-4">
                                 <!-- Title -->
-                                <h5 class="mb-3">{{__('All Lessons')}}</h5>
+                                <h5 class="mb-3">{{__('All Session')}}</h5>
                                 <!-- Course item START -->
                                 <div class="row mb-3">
 

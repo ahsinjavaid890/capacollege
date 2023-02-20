@@ -58,7 +58,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{ url('student/my-course-lessons')}}/?id={{$course->id}}" class="  nav-link fw-bolder">{{__('Lessons')}}</a>
+                                    <a href="{{ url('student/my-course-lessons')}}/?id={{$course->id}}" class="  nav-link fw-bolder">{{__('Session')}}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="" class="@if(($selected_nav ?? '') === 'student-course-discussion') active @endif nav-link fw-bolder">{{__('Discussions')}}</a>
