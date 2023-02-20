@@ -31,25 +31,6 @@
     </div>
     <div class="row">
         <div class="col-md-12 mb-3">
-<<<<<<< Updated upstream
-            <div class="card certificate-card">
-                <div class="card-body">
-                    <div class="row ">
-                        <div class="col-md-12">
-                            <div  class="logo_text d-flex certificate justify-content-center">
-                                <img style="width: 60px;height: 60px;" src="{{ url('public') }}/uploads/{{$super_settings['favicon']}}" width="100px">
-                                <h2>Cake Uncle Academy of Pastry Arts</h2>
-                            </div>
-                            <div class="certificate-heading text-center">
-                                @if($certificate->type == 'appriciation')
-                                <h2>Appreciation Certificate</h2>
-                                @else
-                                <h2>{{ $certificate->title }}</h2>
-                                @endif
-                            </div>
-                            <div class="certificate-description text-center mt-4">
-                                <p>To Whom It May Concern <br> This is to certify that <br><span style="font-family: monospace;">@if(!empty( $certificate_received->student_id))
-=======
             <div class="certificate-container">
                 <div class="certificate" >
                     <div class="water-mark-overlay"></div>
@@ -62,23 +43,11 @@
                         <h1>@if($certificate->type == 'appriciation')Appreciation Certificate @else{{ $certificate->title }} @endif
                         <p class="student-name">
                             @if(!empty( $certificate_received->student_id))
->>>>>>> Stashed changes
                                 @if(!empty($students[ $certificate_received->student_id]))
                                     @if(isset($students[ $certificate_received->student_id]))
                                         {{$students[ $certificate_received->student_id]->first_name}}  {{$students[ $certificate_received->student_id]->last_name}}
                                     @endif
                                 @endif
-<<<<<<< Updated upstream
-                            @endif</span>
-                            <br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>
-                            @if($certificate->type == 'appriciation')
-                            <p class="employe_des">
-                                <span>Certificate of :</span>Appreciation Certificate
-                                </p>
-                            @else
-                            <p class="employe_des">
-                                <span>Certificate of :</span>@if(!empty( $certificate->course_id))
-=======
                             @endif
                         </p>
                         <div class="certificate-content">
@@ -93,7 +62,6 @@
                                     @else
                                     <p class="topic-description" style="font-size: 32px;">
                                         <span>Certificate of :</span>@if(!empty( $certificate->course_id))
->>>>>>> Stashed changes
 
                                 @if(!empty($courses[ $certificate->course_id]))
                                     @if(isset($courses[ $certificate->course_id]))
@@ -105,33 +73,12 @@
                                         </p>
                                     @endif
 
-<<<<<<< Updated upstream
-                        @endif<br>
-                                </p>
-                            @endif
-
-
-                            
-                            </div>
-                            <div class="d-flex justify-content-around">
-                                <div class="p-2"><div class="certificate-date">
-                                        <p>Issue Date: 16/Dec/2022</p>
-                                        <p>Place: Chandigarh</p>
-                                    </div></div>
-                                <div class="p-2"><div class="certificate-manager">
-                                        <p><span>Jaspreet Kaur</span><br>Manager-HR</p>
-                                    </div></div>
-                                <div class="p-2"><div class="certificate-sign">
-                                        <p><br><span>Signature</span></p>
-                                    </div></div>
-=======
                             </div>
                         </div>
                         <div class="certificate-footer text-muted">
                             <div class="row">
                                 <div class="col-md-4">
                                     <p class="text-justify">Place: <span style="text-decoration: underline;">Chandigarh</span></p>
-                                    <p class="text-justify">Issue Date: <span style="text-decoration: underline;">16/Dec/2022</span></p>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="row">
@@ -142,12 +89,13 @@
                                         </div>
                                         <div class="col-md-6">
                                             <p>
-                                                Signature :_____________
+                                                Issue Date: 16/Dec/2022
                                             </p>
                                         </div>
                                     </div>
                                 </div>
->>>>>>> Stashed changes
+                                <div class="col-md-12">
+                                    <p class="text-end"> Signature<span style="text-decoration: underline;">:_____________</span></p>
                             </div>
                         </div>
                     </div>

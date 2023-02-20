@@ -107,48 +107,6 @@
             </form>
         </div>
         <div class="col-md-12 mb-3">
-<<<<<<< Updated upstream
-            <div class="card certificate-card">
-                <div class="card-body">
-                    <div class="row ">
-                        <div class="col-md-12">
-                            <div class="logo_text d-flex certificate">
-                                <img src="{{ url('public') }}/uploads/{{$super_settings['favicon']}}" width="100px">
-                                <h2>Cake Uncle Academy of Pastry Arts</h2>
-                            </div>
-                            <div class="curved_text text-center">
-                                <h3>CakeUncle ACADEMY OF Pastery ARTS</h3>
-                            </div>
-                            <div class="certificate-heading text-center">
-                                <h2>Certificate</h2>
-                                <p>Of appreciation</p>
-                            </div>
-                            <div class="certificate-description text-center mt-4">
-                                <p>To Whom It May Concern <br> This is to certify that <br>Mr. Amandeep Singh <br>was is the employment of our organization <br> Cakeuncle Academy of pastry Arts <br> and his employment particulars are as under: </p>
-                                <p class="employe_des">
-                                    <span>Full Name:</span> Amandeep Singh<br>
-                                    <span>Designation:</span>Pastry Chef<br>
-                                    <span>Salary:</span> 3,60,000/- Per Annum<br>
-                                    <span>Full Name:</span> Amandeep Singh<br>
-                                </p>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <div class="certificate-date">
-                                        <p>Date: 16/Dec/2022</p>
-                                        <p>Place: Chandigarh</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="certificate-manager">
-                                        <p><span>Jaspreet Kaur</span><br>Manager-HR</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="certificate-sign">
-                                        <p><br><span>Signature</span></p>
-                                    </div>
-=======
             <div class="certificate-container">
                 <div class="certificate" >
                     <div class="water-mark-overlay"></div>
@@ -191,7 +149,6 @@
                                 </div>
                                 <div class="col-md-12">
                                     <p class="text-end"> Signature<span style="text-decoration: underline;">:_____________</span></p>
->>>>>>> Stashed changes
                                 </div>
                             </div>
                         </div>
