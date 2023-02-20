@@ -666,4 +666,5 @@ class AdminController extends AdminBaseController
 
         return redirect(config("app.url") . "/admin/dashboard");
     }
+    
 }

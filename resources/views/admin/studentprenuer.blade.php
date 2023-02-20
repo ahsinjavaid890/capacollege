@@ -152,9 +152,6 @@
 
                         @csrf
                         <button  type="submit" id="btn_submit" class="btn btn-info">{{__('Save')}}</button>
-                        <input type="hidden" name="category_id" id="category_id" value="">
-
-
                     </form>
 
 

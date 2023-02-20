@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTeammembersTable extends Migration
+class CreateNewpointsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTeammembersTable extends Migration
      */
     public function up()
     {
-        Schema::create('teammembers', function (Blueprint $table) {
+        Schema::create('newpoints', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateTeammembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teammembers');
+        Schema::dropIfExists('newpoints');
     }
 }

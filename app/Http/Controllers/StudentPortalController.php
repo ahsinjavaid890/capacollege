@@ -20,6 +20,9 @@ use App\Models\Message;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Student;
+use App\Models\newpoints;
+use App\Models\pts;
+use App\Models\cashpoints;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -817,5 +820,36 @@ class StudentPortalController extends StudentBaseController
         $comment->save();
 
         return redirect()->back();
+    }
+    public function points()
+    {
+        return view("student-portal.points");
+    }
+    public function point(Request $request)
+    {
+        $data = new newpoints();
+        $data->image = $request->points;
+        $data->save();
+        return back()->with('success','Studentprenuer Added succesfully');
+    }
+    public function cashpoints(Request $request)
+    {
+        $data = new cashpoints();
+        $data->cash = $request->cash;
+        $data->save();
+        return back()->with('success','Studentprenuer Added succesfully');
+    }
+    public function pts()
+    {
+        return view("student-portal.pts");
+    }
+    public function addpts(Request $request)
+    {
+       $data = new Pts();
+        $data->name = $request->name;
+        $data->price = $request->price;
+        $data->reach_price = $request->reach_price;
+        $data->save();
+        return back()->with('success','PTS Added succesfully');
     }
 }
