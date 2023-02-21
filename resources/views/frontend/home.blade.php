@@ -146,9 +146,6 @@
     <section class="py-6"style="background-color: #f3dfe8;">
         <div class="testimonial-active-two my-0 mx-auto" >
             <div class="container">
-                <div class="viewall_btn text-end">
-                    <a href="{{ url('testimonial') }}" class="btn btn-blue">View All</a>
-                </div>
                 <div class="row mb-5">
                     <div class="col-lg-12 text-center">
                         <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
@@ -175,6 +172,9 @@
                         </div>
                     </div>
                 @endforeach
+                </div>
+                <div class="viewall_btn text-end mt-3">
+                    <a href="{{ url('testimonial') }}" class="btn btn-blue">View All</a>
                 </div>
             </div>
         </div>

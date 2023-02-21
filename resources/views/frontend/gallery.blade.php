@@ -14,15 +14,24 @@
             flex-wrap: nowrap;
         }
     }
-    @media only screen and (max-width: 767px){
+    @media only screen and (min-width: 275px) and (max-width: 767px){
         .gallery_section ul.tabs{
             width: 100% !important;
         }
         .gallery_section ul.tabs li{
             width: 40% !important;
-            font-size: 15px;
+            font-size: 13px;
         }
     }
+    @media only screen and (max-width: 290px){
+        .gallery_section ul.tabs li{
+            width: 40% !important;
+            font-size: 10px !important;
+            margin-right: 23px !important;
+        }
+    }
+    
+
     .cardgallaery {
         position: relative;
         width: 250px;

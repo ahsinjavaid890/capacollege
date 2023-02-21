@@ -18,6 +18,7 @@ use App\Models\Student;
 use App\Models\testimonials;
 use App\Models\studentprenuer;
 use App\Models\Terms;
+use App\Models\contactus;
 use App\Models\User;
 use App\Models\Workspace;
 
@@ -298,6 +299,14 @@ class AdminController extends AdminBaseController
         ]);
     }
 
+    public function contactus()
+    {
+        $data = contactus::all();
+        return \view("admin.contact", [
+            "selected_navigation" => "contact",
+            "data" => $data,
+        ]);
+    }
     public function gallaryimages()
     {
         $data = gallary_images::all();
@@ -666,5 +675,4 @@ class AdminController extends AdminBaseController
 
         return redirect(config("app.url") . "/admin/dashboard");
     }
-    
 }

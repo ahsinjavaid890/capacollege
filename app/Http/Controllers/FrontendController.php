@@ -22,16 +22,18 @@ use App\Models\testimonials;
 use App\Models\studentprenuer;
 use App\Models\JobType;
 use App\Models\CareerLevel;
+use App\Models\contactus;
 use App\Models\gallary_images;
 use App\Models\purchase_diploma;
 use App\Models\Terms;
 use App\Models\User;
 use Illuminate\Support\Str;
-
 use App\Supports\UpdateSupport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use Illuminate\Mail\Mailable;
 
+use Mail;
 class FrontendController extends WebsiteBaseController
 {
     public function __construct()
@@ -517,7 +519,35 @@ class FrontendController extends WebsiteBaseController
     {
         return view("frontend.contact");
     }
+    public function contacts(Request $request)
+    {
+        $this->validate($request, [
+            'fname' => 'required',
+            'lname' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
+        ]);
 
+        $insert = new contactus();
+        $insert->fname = $request->fname;
+        $insert->lname = $request->lname;
+        $insert->email = $request->email;
+        $insert->phone = $request->phone;
+        $insert->message = $request->message;
+       $info = array(
+            'name' => "Alex"
+        );
+        Mail::send(['text' => 'mail'], $info, function ($message)
+        {
+            $message->to('alex@example.com', 'W3SCHOOLS')
+                ->subject('Basic test eMail from W3schools.');
+            $message->from('sender@example.com', 'Alex');
+        });
+        echo "Successfully sent the email";
+            $insert->save();
+        return redirect()->back()->with('message', 'Your Query Submited Successfully We Will Contact You With In 24 Hours');
+    }
     public function pricing()
     {
         $contact = ContactSection::first();

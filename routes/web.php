@@ -67,6 +67,7 @@ Route::get("/testimonials", [AdminController::class, "testimonials"]);
 Route::post("addtestimonials", [AdminController::class, "addtestimonials"]);
 Route::post("edittestimonials", [AdminController::class, "edittestimonials"]);
 Route::get("testimonial/{id}", [AdminController::class, "testimonial"]);
+Route::get("/contactus", [AdminController::class, "contactus"]);
 
 
 
@@ -115,6 +116,7 @@ Route::get("/termsandconditions", [
     "termsCondition",
 ]);
 Route::get("/contact", [FrontendController::class, "contact"]);
+Route::post("/contacts", [FrontendController::class, "contacts"]);
 Route::get("/news", [FrontendController::class, "blogs"]);
 
 Route::get("/news/{slug}", [FrontendController::class, "viewArticle"]);

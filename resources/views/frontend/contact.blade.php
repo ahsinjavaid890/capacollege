@@ -44,36 +44,42 @@
                 <div class="col-md-6">
                     <div class="contact-section2_formbg">
                         <h2 class="contact-section2_form__title">Say Something...</h2>
-                        <form class="contact-section2_form" id="contact-form" action="assets/php/mail.php" method="post" novalidate="novalidate">
+                        <form id="contact-form" action="{{ url('contacts') }}" method="post" novalidate="novalidate">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-6 col-6 form-p">
                                     <div class="form-group">
                                         <label>First Name*</label>
-                                        <input class="form-field" type="text" name="name">
+                                        <input class="form-field" type="text" name="fname" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-6 form-p">
                                     <div class="form-group">
                                         <label>Last Name*</label>
-                                        <input class="form-field" type="text" name="lastname">
+                                        <input class="form-field" type="text" name="lname" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12 form-p">
                                     <div class="form-group">
                                         <label>Email Address*</label>
-                                        <input class="form-field" type="email" name="email">
+                                        <input class="form-field" type="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-p">
+                                    <div class="form-group">
+                                        <label>Contact*</label>
+                                        <input class="form-field" type="phone" name="phone" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12 form-p">
                                     <div class="form-group">
                                         <label>Message*</label>
-                                        <textarea class="form-control text-area" name="message"></textarea>
+                                        <textarea class="form-control text-area" name="message" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 form-p">
                                     <div class="form-group mb-0 d-flex justify-content-center">
-                                        <button class="btn  btn-success text-white" type="submit" value="Send Massage">Send Message</button>
+                                        <button class="btn  btn-success text-white" type="submit">Send Message</button>
                                     </div>
                                 </div>
                             </div>

@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-5">
                         <div class="card">
                             <div class="card-body p-0">
                                 <div class="member-image cell-left">
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-5">
                         <div class="card">
                             <div class="card-body p-0">
                                 <div class="member-image cell-left">
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-5">
                         <div class="card">
                             <div class="card-body p-0">
                                 <div class="member-image cell-left">
