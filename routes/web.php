@@ -334,11 +334,6 @@ Route::prefix("student")
             StudentPortalController::class,
             "postStudentMessages",
         ]);
-        Route::get("/points", [StudentPortalController::class,"points"]);
-        Route::post("/point", [StudentPortalController::class, "point"]);
-        Route::post("/cashpoints", [StudentPortalController::class,"cashpoints"]);
-        Route::get("/pts", [StudentPortalController::class,"pts"]);
-        Route::post("/addpts", [StudentPortalController::class, "addpts"]);
         Route::get("/assignments", [
             StudentPortalController::class,
             "assignments",

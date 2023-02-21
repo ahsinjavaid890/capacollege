@@ -397,7 +397,7 @@ class StudentPortalController extends StudentBaseController
             $rating_out_of_five = 0;
         }
 
-        return \view("student-portal.lessons-view-course", [
+        return view("student-portal.lessons-view-course", [
             "selected_navigation" => "student-course",
             "selected_nav" => "student-course-lessons",
             "course" => $course,
@@ -820,36 +820,5 @@ class StudentPortalController extends StudentBaseController
         $comment->save();
 
         return redirect()->back();
-    }
-    public function points()
-    {
-        return view("student-portal.points");
-    }
-    public function point(Request $request)
-    {
-        $data = new newpoints();
-        $data->image = $request->points;
-        $data->save();
-        return back()->with('success','Studentprenuer Added succesfully');
-    }
-    public function cashpoints(Request $request)
-    {
-        $data = new cashpoints();
-        $data->cash = $request->cash;
-        $data->save();
-        return back()->with('success','Studentprenuer Added succesfully');
-    }
-    public function pts()
-    {
-        return view("student-portal.pts");
-    }
-    public function addpts(Request $request)
-    {
-       $data = new Pts();
-        $data->name = $request->name;
-        $data->price = $request->price;
-        $data->reach_price = $request->reach_price;
-        $data->save();
-        return back()->with('success','PTS Added succesfully');
     }
 }

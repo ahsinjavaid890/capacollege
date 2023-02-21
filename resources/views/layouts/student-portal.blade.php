@@ -117,24 +117,6 @@
                     <span class="nav-link-text  ms-3">{{__('Messages')}}</span>
                 </a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link @if(($selected_navigation ?? '') === 'points') active @endif"
-                   href="{{ url('student/points') }}">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    <span class="nav-link-text  ms-3">{{__('Points')}}</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link @if(($selected_navigation ?? '') === 'pts') active @endif"
-                   href="{{ url('student/pts') }}">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    <span class="nav-link-text  ms-3">{{__('PTS')}}</span>
-                </a>
-            </li>
-
             <li class="nav-item mt-3 mb-2">
                 <h6 class="ps-4 ms-2 text-uppercase text-white text-xs opacity-6">{{__('Account Settings')}}  </h6>
             </li>
@@ -191,8 +173,15 @@
                 <h6 class="font-weight-bolder mb-0"></h6>
             </nav>
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-                <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                <div class="ms-md-auto pe-md-3 d-flex align-items-center mobile_logo">
                     <div class="input-group">
+                        <a class="text-center m-0" href="{{ url('student/dashboard') }}">
+                           @if(!empty($super_settings['logo']))
+                            <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; " alt="...">
+                        @else
+                            <span class=" font-weight-bold">{{config('app.name')}}</span>
+                        @endif
+                        </a>
                     </div>
                 </div>
                 <ul class=" justify-content-end">

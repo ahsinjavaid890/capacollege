@@ -73,26 +73,7 @@
                 {{$product->name}}
             </h3>
 
-            <!-- Rating -->
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="d-flex align-items-center mb-4">
-                        <h3 class="me-3 mb-0">{!! getRecipesRating($product->id) !!}/5</h3>
-                        <div>
-                            {!! renderRecipesRating($product->id) !!}
-                            <p class="mb-0 small mt-n1">{{__('Reviews from our buyers')}}</p>
-                        </div>
-
-
-
-                    </div>
-                </div>
-              <!--   <div class="col-md-4 mb-3 text-end">
-                    <botton  class="btn btn-sm btn-success mb-0 mt-2 mt-sm-0" data-bs-toggle="modal" data-bs-target="#review">{{__('Review')}}</botton>
-
-                </div> -->
-            </div>
-
+            
 
 
             <!-- Price Item START -->

@@ -72,7 +72,7 @@
 
 
                                 <li class="nav-item" >
-                                    <a href="{{ url('student/my-course-lessons')}}/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Session')}}</a>
+                                    <a href="{{ url('capacollege/student/my-course-lessons')}}/?id={{$course->id}}" class="nav-link fw-bolder @if(($selected_nav ?? '') === 'my-course-lessons') active @endif">{{__('Session')}}</a>
                                 </li>
                                 <li class="nav-item" >
                                     <a href="{{ url('student/my-course-discussion')}}/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Comments')}}</a>

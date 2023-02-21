@@ -45,9 +45,9 @@
                                     <a class="d-block shadow-xl border-radius-xl">
                                         @if(empty($course->image))
                                             <img src="{{ url('public') }}/img/placeholder.png"
-                                                 class="w-100 border-radius-lg shadow-sm mt-3">
+                                                 class="w-100 border-radius-lg shadow-sm ">
                                         @else
-                                            <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
+                                            <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm ">
                                         @endif
                                     </a>
                                     <div class="card-body px-1 pb-0">
