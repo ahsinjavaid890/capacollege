@@ -23,20 +23,26 @@ class ExportCommand extends Command
     protected $description = 'Export translatable strings for a language to a JSON file.';
 
     /**
+     * @var Exporter
+     */
+    protected $exporter;
+
+    /**
      * ExportCommand constructor.
      *
-     * @param  \KKomelin\TranslatableStringExporter\Core\Exporter  $exporter
-     * @return void
+     * @param Exporter $exporter
      */
-    public function __construct(protected Exporter $exporter)
+    public function __construct(Exporter $exporter)
     {
         parent::__construct();
+
+        $this->exporter = $exporter;
     }
 
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
      */
     public function handle()
     {
@@ -47,8 +53,6 @@ class ExportCommand extends Command
 
             $this->info('Translatable strings have been extracted and written to the ' . $language . '.json file.');
         }
-
-        return static::SUCCESS;
     }
 
     /**
