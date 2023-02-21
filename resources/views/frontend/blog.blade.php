@@ -20,7 +20,7 @@
     <section class="py-8">
         <div class="container">
             <div class="row">
-                <div class=" ms-3 col-8 mx-auto  mb-5">
+                <div class="col-md-12 mb-5">
 
                     <h2>{{__('Read the articles of our News')}} </h2>
                     <p class="">
@@ -28,12 +28,12 @@
                     </p>
                 </div>
             </div>
-            <div class="container ms-3 row mb-4">
+            <div class="row mb-4">
                 @foreach($blogs as $blog)
-                    <div class="col-lg-4 col-md-6 position-relative mb-sm-0 mb-3">
+                    <div class="col-md-4 mb-3">
                         <hr class="vertical dark d-lg-block d-none">
                         <div class="card card-plain">
-                            <div class="card-header p-0 mx-lg-3 mt-3 position-relative z-index-1">
+                            <div class="card-header p-0 position-relative z-index-1">
                                 <a href="javascript:;" class="d-block">
                                     @if(!empty($blog->cover_photo))
                                         <img src="{{ url('public') }}/uploads/{{$blog->cover_photo}}" class="img-fluid border-radius-md" alt="...">

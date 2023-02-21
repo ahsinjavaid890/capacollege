@@ -211,15 +211,8 @@
                         @endforeach
                         <div class="testimonial-item equal-height style-6 next_for_you" style="height: 254px;">
                             <div class="testimonial-image cell-left">
-                                <img src="{{ url('public') }}/img/placeholder.jpeg" class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                                <img src="{{ url('public') }}/img/next_you.png" class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                 
-                            </div>
-                            <div class="cell-right">
-                                    <!-- <div class="testimonial-name"><span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">{{$studentprenuers->bakery_name}}</span> -->
-                                        <p href="javascript:void(0)" class="text-darker card-title h5 d-block">
-                                            Next is You 
-                                        </p>
-                                </div>
                             </div>
                         </div>
                     </div>

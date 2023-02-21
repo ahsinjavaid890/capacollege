@@ -20,6 +20,7 @@
         }
         .gallery_section ul.tabs li{
             width: 40% !important;
+            font-size: 15px;
         }
     }
     .cardgallaery {

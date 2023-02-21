@@ -777,7 +777,7 @@ mix-blend-mode: luminosity;
 }
 .cell-right {
     padding-top: 35px;
-    padding-left: 15px;
+    text-align: center;
 }
 .testimonial-name {
     font-weight: 600;
@@ -844,7 +844,7 @@ i.fa.fa-quote-left {
 .studentprenuer .owl-carousel .owl-item img {
     display: block;
     width: 100%;
-    height: 134px !important;
+    height: 134px;
 }
 .member-image img{
     border-radius: 12px 12px 0px 0px !important;
@@ -859,19 +859,6 @@ i.fa.fa-quote-left {
 .team_member .card{
     border-radius: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 .certificate-container {
     padding: 50px;
     width: 100%;
@@ -939,14 +926,6 @@ i.fa.fa-quote-left {
 
     text-align: center;
 }
-
-
-
-
-
-
-
-
 .next_for_you{
     position: fixed;
     left: -420px;
@@ -954,5 +933,36 @@ i.fa.fa-quote-left {
 }
 .next_for_you .testimonial-image img{
     margin: 0 !important;
-    height: 157px !important;
+    height: 237px !important;
 }
+@media only screen and (min-width: 275px) and (max-width: 767px){
+    .next_for_you{
+        position: inherit;
+        left: -420px;
+        width: 91%;
+    }
+    .ps-10 {
+        padding-left: 0rem!important;
+    }
+    .why_choose .text-center h3{
+        left: 13% !important;
+    }
+    .custom-list > li{
+        font-size: 17px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+    .owl-theme .owl-controls .owl-buttons .owl-prev {
+        top: 48%;
+    }
+    .owl-theme .owl-controls .owl-buttons .owl-next{
+        top: 48%;
+    }
+    .card-header img {
+        height: 184px !important;
+    }
+    .address_link{
+        width: 180px !important;
+    }
+}
+.

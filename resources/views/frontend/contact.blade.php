@@ -27,7 +27,7 @@
                         <p class="contact-section2__text">Leave your Message</p>
                         <ul class="contact-section2_list">
                             <li>
-                                <span class="contact-section2_list__icon" style="width: 103px !important;"><i class="lastudioicon lastudioicon-pin-3-2"></i></span>
+                                <span class="contact-section2_list__icon address_link" style="width: 103px;"><i class="lastudioicon lastudioicon-pin-3-2"></i></span>
                                 <span class="contact-section2_list__text">CAPA Chandigarh - Quite Office No. 1, First Floor, ( Flower Market, Opposite Khukhrain Bhawan) Sector 35-A Chandigarh!</span>
                             </li>
                             <li>
