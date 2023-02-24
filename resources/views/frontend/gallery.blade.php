@@ -21,6 +21,7 @@
         .gallery_section ul.tabs li{
             width: 40% !important;
             font-size: 13px;
+            padding-top: 20px !important;
         }
     }
     @media only screen and (max-width: 290px){
@@ -76,7 +77,7 @@
             margin: auto;
         }
     .gallery_section ul.tabs li{
-            margin-right: 26px;
+            margin-right: 12px;
             font-weight: bold;
             padding-top: 17px;
             text-align: center;
@@ -85,7 +86,7 @@
             color: #fff;
             border-radius: 30px;
             height: 61px;
-            width: 44%;
+            width: 46%;
         }
 
     .gallery_section ul.tabs li.current{

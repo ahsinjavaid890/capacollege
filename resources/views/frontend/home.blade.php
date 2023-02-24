@@ -118,24 +118,24 @@
                     <div class="row">
                         <div class="col-md-6">
                             <ul class="custom-list">
-                              <li>Career Consultancy Free</li>
-                              <li>Business Guidance</li>
-                              <li>Hands on practice for each student</li>
-                              <li>Tools kit provided free to every student</li>
-                              <li>Dress provided free to every student</li>
-                              <li>Extra classes to students if required</li>
-                              <li>Emi options to all the students</li>
+                              <li>Free Career Consultation.</li>
+                              <li>Full guidance in How to run a business.</li>
+                              <li>Hands on practice for each student.</li>
+                              <li>Free Tools kit provided to every student.</li>
+                              <li>Free uniform provided to every student</li>
+                              <li>Extra classes available for students if necessary.</li>
+                              <li>Digital Marketing Classes provided to students for helping their startups</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul class="custom-list">
                               
-                              <li>Cakeuncle Franchise free to our student for first year to help getting business online</li>
-                              <li>Digital Marketing Classes provided to students for thier startups</li>
+                              <li>Free Cakeuncle Franchise to our student for first year to help getting and growing business online</li>
+                              <li>EMI options to all the students.</li>
                               <li>One year membership free to all our students for doubts or query related to the course.</li>
-                              <li>Check your certificate online here anytime</li>
-                              <li>We give you access to all our recipes online</li>
-                              <li>That's it buddy what all you need 👍😊</li>
+                              <li>Check your certificate online anyday and anytime.</li>
+                              <li>We provide access to all our recipes in online mode</li>
+                              <li>We cater your needs like no one else</li>
                             </ul>
                         </div>
                     </div>
