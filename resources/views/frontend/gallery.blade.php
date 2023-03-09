@@ -31,8 +31,6 @@
             margin-right: 23px !important;
         }
     }
-    
-
     .cardgallaery {
         position: relative;
         width: 250px;
@@ -46,7 +44,6 @@
         backface-visibility: hidden;
         will-change: tranform;
     }
-
     .card__overlay {
         position: absolute;
         left: 0;
@@ -58,59 +55,54 @@
         mix-blend-mode: lighten;
         opacity: 0.5;
     }
-
     .card__image img {
         max-width: 100%;
         width: 250px;
         height: 250px;
         mix-blend-mode: lighten;
     }
-
     .gallery_section ul.tabs{
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            padding-left: 0;
-            margin-bottom: 0;
-            list-style: none;
-            width: 35%;
-            margin: auto;
-        }
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        width: 35%;
+        margin: auto;
+    }
     .gallery_section ul.tabs li{
-            margin-right: 12px;
-            font-weight: bold;
-            padding-top: 17px;
-            text-align: center;
-            cursor: pointer;
-            background: #6c4646;
-            color: #fff;
-            border-radius: 30px;
-            height: 61px;
-            width: 46%;
-        }
-
+        margin-right: 12px;
+        font-weight: bold;
+        padding-top: 17px;
+        text-align: center;
+        cursor: pointer;
+        background: #6c4646;
+        color: #fff;
+        border-radius: 30px;
+        height: 61px;
+        width: 46%;
+    }
     .gallery_section ul.tabs li.current{
-            background: #64317c;
-            color: white;
-        }
-
+        background: #64317c;
+        color: white;
+    }
     .gallery_section .tab-content{
-            display: none;
-            width: 100%;
-            height: auto;
+        display: none;
+        width: 100%;
+        height: auto;
 /*            margin-top: -3px;*/
-            background: #fff;
-            color: #000;
-            border-radius: 30px;
-            z-index: 1000;
+        background: #fff;
+        color: #000;
+        border-radius: 30px;
+        z-index: 1000;
 /*            box-shadow: 0px 10px 10px rgb(0 0 0 / 40%);*/
-            padding: 30px;
-            margin-bottom: 50px;
-        }
-
+        padding: 30px;
+        margin-bottom: 50px;
+    }
     .gallery_section .tab-content.current{
-            display: inherit;
-        }
+        display: inherit;
+    }
 </style>
 <section class="">
     <div class="bg-dark-alt position-relative">
@@ -136,28 +128,36 @@
             </ul>
             <div id="tab-1" class="tab-content current">
                <div class="gallaerysection">
+                     <div class="row">
                     @foreach($data as $r)
-                    <div id="card-1" class="cardgallaery rounded">
-                        <div class="card__overlay">
+                        <div class="col-md-3">
+                            <div id="card-1" class="cardgallaery rounded">
+                                <div class="card__overlay">
+                                </div>
+                                <a href="{{ url('public/images') }}/{{ $r->image }}" class="card__image gallaery">
+                                    <img src="{{ url('public/images') }}/{{ $r->image }}" alt="" />
+                                </a>
+                            </div>
                         </div>
-                        <a href="{{ url('public/images') }}/{{ $r->image }}" class="card__image gallaery">
-                            <img src="{{ url('public/images') }}/{{ $r->image }}" alt="" />
-                        </a>
-                    </div>
                     @endforeach
+                    </div>
                 </div>
             </div>
             <div id="tab-2" class="tab-content">
                 <div class="gallaerysection">
-                    @foreach($data as $r)
-                    <div id="card-1" class="cardgallaery rounded">
-                        <div class="card__overlay">
+                    <div class="row">
+                    @foreach($results as $r)
+                        <div class="col-md-3">
+                            <div id="card-1" class="cardgallaery rounded">
+                                <div class="card__overlay">
+                                </div>
+                                <a href="{{ url('public/images') }}/{{ $r->image }}" class="card__image gallaery">
+                                    <img src="{{ url('public/images') }}/{{ $r->image }}" alt="" />
+                                </a>
+                            </div>
                         </div>
-                        <a href="{{ url('public/images') }}/{{ $r->image }}" class="card__image gallaery">
-                            <img src="{{ url('public/images') }}/{{ $r->image }}" alt="" />
-                        </a>
-                    </div>
                     @endforeach
+                    </div>
                 </div>
             </div>
 

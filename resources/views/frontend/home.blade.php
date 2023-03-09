@@ -107,8 +107,26 @@
         .custom-list li{
             color: white;
         }
+        .emi_heading{
+            max-width: 77%;
+            margin: auto;
+            font-size: 34px;
+            padding-top: 130px;
+        }
     </style>
-    <section class="mt-4 background-img why_choose" style=" background-image: url('{{ url('public/images/franchise.png')  }}');">
+    <section class="easy_emi pt-5 pb-5" style="background-color: #f3dfe8;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="emi_heading">Easy EMI options available. We are now partnered with</h1>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url('public/img/emi.jfif') }}" class="img-fluid" style="box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="background-img why_choose" style=" background-image: url('{{ url('public/images/franchise.png')  }}');">
         <div class="container" style="position:relative;">
             <div class="row">
                 <div class="col-md-12">

@@ -10,6 +10,7 @@ use App\Models\CourseCategory;
 use App\Models\CourseReview;
 use App\Models\EbookReview;
 use App\Models\Job;
+use DB;
 use App\Models\JobApplication;
 use App\Models\LandingPage;
 use App\Models\Lesson;
@@ -18,6 +19,7 @@ use App\Models\Product;
 use App\Models\ProductCategories;
 use App\Models\Setting;
 use App\Models\Student;
+use App\Models\CertificateTemplate;
 use App\Models\testimonials;
 use App\Models\studentprenuer;
 use App\Models\JobType;
@@ -53,7 +55,40 @@ class FrontendController extends WebsiteBaseController
             return $next($request);
         });
     }
+    public function verifycertificate(Request $request)
+    {
+        $certificate_receives = DB::Table('certificate_receives')->where('certificate_number' , $request->id)->get();
+        if($certificate_receives->count() == 0)
+        {
+            return view("frontend.verifyform")->with("errors", "Your Verication Code Is Wrong");
+        }else{
+            $users = User::all()
+            ->keyBy("id")
+            ->all();
+        $courses = Course::all()
+            ->keyBy("id")
+            ->all();
+        $students = Student::all()
+            ->keyBy("id")
+            ->all();
 
+        if ($request->id) {
+            $certificate = CertificateTemplate::where(
+                "id",
+                $request->id
+            )->first();
+        }
+            $certificate_receives = $certificate_receives->first();
+            return view("frontend.certificate_receives", [
+            "selected_navigation" => "student-certificate",
+            "certificate" => $certificate,
+            "users" => $users,
+            "students" => $students,
+            "courses" => $courses,
+            "certificate_receives" => $certificate_receives,
+        ]);
+        }
+    }
     public function home()
     {
         $current_build_id = config("app.build_id", 1);
@@ -224,9 +259,10 @@ class FrontendController extends WebsiteBaseController
     }
     public function gallery()
     {
-        $data = gallary_images::all();
+        $results = gallary_images::where('type_moments', 'Fun Moments')->get();
+        $data = gallary_images::where('type_moments', 'Academic Moments')->get();
         return view('frontend.gallery', [
-            "data" => $data,]);
+            "data" => $data, "results" => $results,]);
     }
     
 
@@ -249,7 +285,7 @@ class FrontendController extends WebsiteBaseController
         $products = $products->get();
         $privacy = PrivacyPolicy::first();
         $contact = ContactSection::first();
-        //        $products = Product::all();
+               // $products = Product::all();
         $recent_products = Product::orderBy("id", "desc")
             ->limit(4)
             ->get();

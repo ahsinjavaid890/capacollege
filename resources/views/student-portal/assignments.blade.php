@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
                 @foreach($assignments as $assignment)
-                    @if($assignment->status !='Draft')
+                    @if($assignment->status ='Draft')
 
                         <tr>
                             <td>

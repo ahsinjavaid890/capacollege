@@ -328,6 +328,7 @@ class AdminController extends AdminBaseController
         
         $newimage = new gallary_images();
         $newimage->image = $filename;
+        $newimage->type_moments = $request->type_moments;
         $newimage->save();
 
         return back()->with('success','Image Added succesfully');

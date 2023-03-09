@@ -29,6 +29,13 @@ class CertificateReceiveController extends BaseController
         $course_purchased->student_id = $request->student_id;
         $course_purchased->save();
 
+
+        $certificatenumber = CertificateReceive::find($course_purchased->id);
+        $certificatenumber->certificate_number = 'CAPA00'.$course_purchased->id;
+        $certificatenumber->save();
+
+
+
         return redirect()->back();
     }
 }

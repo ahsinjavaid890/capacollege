@@ -45,74 +45,55 @@
 
                                 <!-- Card item START -->
                                 @foreach($products as $product)
+                                <div class="col-md-3">
+                                    <div class="card recipie_card">
+                                        <div class="dropstart threedrop">
+                                            <a href="javascript:" class="text-secondary" id="dropdownMarketingCard"
+                                               data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
+                                                aria-labelledby="dropdownMarketingCard">
+                                                <li><a class="dropdown-item border-radius-md"
+                                                       href="{{ url('add-product')}}?id={{$product->id}}">{{__('Edit')}}</a></li>
 
-                                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                                        <div class="card h-100">
-                                            <div class="card-header">
-                                                <div class="text-end">
-                                                    <div class="dropstart">
-                                                        <a href="javascript:" class="text-secondary" id="dropdownMarketingCard"
-                                                           data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-v"></i>
-                                                        </a>
-                                                        <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
-                                                            aria-labelledby="dropdownMarketingCard">
-                                                            <li><a class="dropdown-item border-radius-md"
-                                                                   href="{{ url('add-product')}}?id={{$product->id}}">{{__('Edit')}}</a></li>
-
-                                                            <li><a class="dropdown-item border-radius-md"
-                                                                   href="{{ url('view-product')}}?id={{$product->id}}">{{__('See Details')}}</a>
-                                                            </li>
-                                                            <li>
-                                                                <hr class="dropdown-divider">
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item border-radius-md text-danger"
-                                                                   href="{{ url('delete/product')}}/{{$product->id}}">{{__('Delete')}}
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="position-relative">
-                                                <!-- Image -->
+                                                <li><a class="dropdown-item border-radius-md"
+                                                       href="{{ url('view-product')}}?id={{$product->id}}">{{__('See Details')}}</a>
+                                                </li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item border-radius-md text-danger"
+                                                       href="{{ url('delete/product')}}/{{$product->id}}">{{__('Delete')}}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <a href="{{ url('shop')}}/{{$product->slug}}">
                                                 @if(empty($product->image))
                                                     <img src="{{ url('public') }}/img/placeholder.jpeg"
-                                                         class="w-100 border-radius-lg shadow-lg p-5">
+                                                         class="w-100 border-radius-lg shadow-lg">
                                                 @else
-                                                    <img src="{{ url('public') }}/uploads/{{$product->image}}" class="p-5  card-img-top">
+                                                    <img src="{{ url('public') }}/uploads/{{$product->image}}" class="card-img-top">
                                                 @endif
-
+                                            </a>
+                                            <div class="product_price mt-3 p-3">
+                                                <a href="{{ url('shop')}}/{{$product->slug}}">
+                                                    <h3>{{$product->name}}</h3>
+                                                </a>
                                             </div>
-                                            <!-- Card body -->
-
-                                            <div class="card-body px-3">
-                                                <!-- Title -->
-                                                <h5 class="card-title mb-0">
-                                                    <a href="{{ url('view-product')}}?id={{$product->id}}" class="">
-                                                        {{$product->name}}</a>
-                                                </h5>
-
-
-                                                <div class="">{!! renderEbookRating($product->id) !!}</div>
-                                            </div>
-
-
-                                            <!-- Card footer -->
-                                            <div class="card-footer pt-0 px-3">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span class="h6 fw-light mb-0">{{__('By')}} <span class="fw-bolder">{{$product->author_name}}</span></span>
-                                                    <!-- Price -->
-                                                    <h5 class="text-success mb-0">
-                                                        INR {{$product->price}}
-                                                    </h5>
-                                                </div>
-                                            </div>
+                                            <div class="justify-content-between owner_card p-3 d-flex">
+                                                <span class="h6 fw-light mb-0">{{__('By')}} <span class="fw-bolder">{{$product->author_name}}</span></span>
+                                                <!-- Price -->
+                                                <h3  class="text-success mb-0">
+                                                    INR {{$product->price}}
+                                                </h3>
+                                            </div>   
                                         </div>
                                     </div>
-
-
+                                </div>
                             @endforeach
                             <!-- Card item END -->
 

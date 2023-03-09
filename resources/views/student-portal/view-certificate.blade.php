@@ -38,7 +38,7 @@
                         <img src="{{ url('public') }}/uploads/{{$super_settings['favicon']}}" class="logo" alt="">
                     </div>
                     <div class="certificate-body">
-                       
+                       <p>Certificate Id : {{ $certificate_received->certificate_number }}</p>
                         <p class="certificate-title"><strong>Cake Uncle Academy of Pastry Arts</strong></p>
                         <h1>@if($certificate->type == 'appriciation')Appreciation Certificate @else{{ $certificate->title }} @endif
                         <p class="student-name">

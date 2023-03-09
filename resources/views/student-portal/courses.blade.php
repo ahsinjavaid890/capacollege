@@ -8,12 +8,12 @@
                       {{__('My Course List')}}
                     </span>
             </h5>
-            <p class="text-muted">{{__('All of my enrolled courses')}}</p>
+            <p class="text-muted">{{__('All of my Enroled courses')}}</p>
 
         </div>
         <div class="col text-end">
 
-            <a href="{{ url('course')}}" type="button" class="btn btn-success text-white btn-rounded"><i class="fas fa-plus"></i>&nbsp;{{__('Enroll for more')}}</a>
+            <a href="{{ url('course')}}" type="button" class="btn btn-success text-white btn-rounded"><i class="fas fa-plus"></i>&nbsp;{{__('Enrol for more')}}</a>
 
         </div>
     </div>
@@ -77,7 +77,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="jumbotron text-center">
-                      <h1>You are not enrolled in any course.</h1>
+                      <h1>You are not Enroled in any course.</h1>
                     </div>
         </div>
     </div>

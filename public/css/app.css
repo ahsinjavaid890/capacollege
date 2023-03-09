@@ -993,3 +993,38 @@ i.fa.fa-quote-left {
         position: inherit;
     }
 }
+@media only screen and (min-width:1000px) and (max-width:1370px){
+    .next_for_you {
+        position: fixed;
+        left: -362px !important;
+    }
+}
+.product_price h3{
+    font-size: 22px;
+}
+.product_price{
+    display: flex;
+    justify-content: space-between;
+}
+.recipie_card{
+    border-radius: 1rem 1rem 0rem 0rem;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+.cart_btn a{
+    max-width: 100%;
+    width: 100%;
+    background-color: #6c4646;
+    border: 0;
+}
+.cart_btn a:hover{
+    background-color: transparent;
+
+}
+.owner_card{
+    align-items: baseline;
+}
+.threedrop{
+    position: absolute;
+    right: 11px;
+    top: 10px;
+}

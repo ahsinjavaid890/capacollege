@@ -83,7 +83,7 @@
                     @endforeach
                     @else
                     <div class="jumbotron text-center">
-                      <h3>You are not enrolled in any course.</h3>
+                      <h3>You are not Enroled in any course.</h3>
                     </div>
                     @endif
                 </div>
@@ -141,7 +141,7 @@
                         @endforeach
                         @else
                         <div class="jumbotron text-center">
-                          <h3>You are not enrolled in any recipes.</h3>
+                          <h3>You are not Enroled in any recipes.</h3>
                         </div>
                         @endif
                         <!-- Card item END -->

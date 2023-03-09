@@ -107,6 +107,9 @@ Route::get("/forhomebakers", [FrontendController::class, "forhomebakers"]);
 Route::get("/gallery", [FrontendController::class, "gallery"]);
 Route::get("/admission", [FrontendController::class, "admission"]);
 Route::get("/testimonial", [FrontendController::class, "testimonial"]);
+Route::get("/verifyform", [FrontendController::class, "verifyform"]);
+Route::get("/certificate_receives", [FrontendController::class, "certificate_receives"]);
+Route::POST("/verifycertificate", [FrontendController::class, "verifycertificate"]);
 
 
 

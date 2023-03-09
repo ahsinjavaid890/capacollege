@@ -106,7 +106,7 @@
                             <a href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
 
                         </div>
-                        <p>{{__('Newly enrolled students')}}</p>
+                        <p>{{__('Newly Enroled students')}}</p>
 
                         <div class="text-start d-flex avatar-group mt-2">
 
@@ -197,7 +197,7 @@
                                         <!-- Info -->
                                         <div class="text-start ms-3">
                                             <h6 class="mb-0 text-white">{{__('Congratulations')}} <span class="ms-4"></span></h6>
-                                            <p class="mb-0 small text-white">{{__('You are enrolled')}}</p>
+                                            <p class="mb-0 small text-white">{{__('You are Enroled')}}</p>
 
                                         </div>
                                     </div>

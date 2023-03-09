@@ -86,7 +86,7 @@
                 </li>
                 <li class="nav-item   ms-lg-auto mx-1">
                     <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('admission') }}">
-                        {{__('How to Enroll')}}
+                        {{__('How to Enrol')}}
 
                     </a>
                 </li>
@@ -196,6 +196,12 @@
                             <a class="nav-link" href="{{ url('cookie-policy')}}" target="_blank">
                                 {{__(' Cookie Policy')}}
                             </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#myModal">
+                                {{__(' Verify Certificate')}}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -248,6 +254,41 @@
         </div>
     </div>
 </footer>
+ 
+ <!-- -----------  Verify Certificate modal -------------- -->
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Verify Certificate</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form action="{{ url('verifycertificate') }}" method="POST">
+      <!-- Modal body -->
+      @csrf
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Certificate Number</label>
+            <input type="text" name="id" class="form-control border-0" required>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn  btn-success text-white">Verify</button>
+      </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+    <!-- ------------- End Modal ------------- -->
 
 
 <script src="{{ url('public') }}/js/app.js?v=94"></script>

@@ -30,6 +30,7 @@
                             <thead class="bg-gray-100">
                             <tr>
                                 <th class="text-uppercase  text-xs">{{__('Image')}}</th>
+                                <th class="text-uppercase  text-xs">{{__('Moments')}}</th>
 
                                 <th>Crated At</th>
                                 <th class=""></th>
@@ -44,6 +45,11 @@
                                     <td>
                                         
                                         <img style="width: 120px;" class="img-thumbnail" src="{{ url('public/images') }}/{{ $r->image }}">
+
+                                    </td>
+                                    <td>
+                                        
+                                        {{ $r->type_moments }}
 
                                     </td>
                                     <td>
@@ -88,13 +94,23 @@
                 </div>
                 <div class="modal-body">
                     <div id="sp_result_div"></div>
-                    <form enctype="multipart/form-data" method="post" action="{{ url('addnewgallaeryimage') }}"  class="">
+                    <form enctype="multipart/form-data" method="post" action="{{ url('addnewgallaeryimage') }}"  class=""  enctype="multipart/form-data">
                         <!-- Form -->
                         <div class="form-group mb-4">
                             <label for="email">{{__('Select Image')}}</label>
                             <div class="input-group">
 
-                                <input type="file" name="image" class="form-control"  id="input_name" autofocus required>
+                                <input type="file" name="image" class="form-control"  id="input_name" autofocus multiple required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="email">{{__('Select Momemts')}}</label>
+                            <div class="input-group">
+                                <select class="form-control" name="type_moments" required>
+                                    <option>Select  Moments</option>
+                                    <option>Fun Moments</option>
+                                    <option>Academic Moments</option>
+                                </select>
                             </div>
                         </div>
                         <!-- End of Form -->

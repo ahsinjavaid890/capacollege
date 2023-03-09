@@ -106,6 +106,7 @@
                     <table class="table  mb-0">
                         <thead class="bg-gray-100">
                         <tr>
+                            <th class="text-uppercase  text-xs font-weight-bolder">{{__('Certificate Number')}}</th>
                             <th class="text-uppercase  text-xs font-weight-bolder">{{__('Name')}}</th>
                             <th class="text-uppercase  text-xs font-weight-bolder">{{__('Assigining Date')}}</th>
                             <th class="text-uppercase text-end  text-xs font-weight-bolder  ps-2">{{__('Action')}}</th>
@@ -114,6 +115,11 @@
                         <tbody>
                         @foreach($course_purchaseds as $course_purchase)
                             <tr>
+                                <td>
+                                    <h6 class="text-sm">
+                                        {{ $course_purchase->certificate_number }}
+                                    </h6>
+                                </td>
                                 <td>
                                     <h6 class="text-sm">
                                         {{ DB::Table('certificate_templates')->where('id' , $course_purchase->certificate_id)->first()->title }}
